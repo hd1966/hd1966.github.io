@@ -1,0 +1,31 @@
+div{
+    background-image: linear-gradient(#F1F8E2,#C0DF81) ;
+}
+span{
+font-weight: bold;
+}
+
+
+.third{
+    font-family:Arial, Helvetica, sans-serif;
+  
+}
+.second
+{
+    font-family: 'Courier New', Courier, monospace;
+ 
+}
+.first
+{
+    
+    font-family:'Times New Roman', Times, serif;
+   
+    
+}
+body{
+    background-color:  #F1F8E2;
+    padding: 10px;
+    margin:  10px; 
+    width: 300px;
+    height: 250px;
+}
