@@ -1,0 +1,28 @@
+.third{
+    background-color: #B2D732;
+    padding: 20px;
+    margin:20px;
+    width: 250px;
+    height: 60px;
+}
+#second
+{
+    background-color: #2B3409;
+    padding: 30px;
+    margin:30px;
+    width: 300px;
+    height: 60px;border: 7px solid #22AABB;
+}
+#first
+{
+    background-color: #D3E788;
+    color: black;
+    margin:40px;
+    width: 200px;
+    height: 60px;
+   
+    
+}
+body{
+    background-color:  #F4F9E1;
+}
