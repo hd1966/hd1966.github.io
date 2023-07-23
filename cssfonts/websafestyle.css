@@ -1,5 +1,6 @@
 div{
     background-image: linear-gradient(#F1F8E2,#C0DF81) ;
+    box-shadow: 5px 5px;
 }
 span{
 font-weight: bold;
