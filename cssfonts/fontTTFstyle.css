@@ -1,0 +1,42 @@
+@font-face {
+    font-family:myRoboto;
+    src: url(Roboto-regular.ttf);
+}
+
+@font-face {
+    font-family:myMickey;
+    src: url(MickeysMerryChristmas.ttf);
+}
+  
+h2 {
+    color: darkgreen;
+}
+div{
+    background-image: linear-gradient(#F1F8E2,#C0DF81) ;
+    box-shadow: 5px 5px black;  
+    padding: 10px;
+    margin:  30px; 
+}
+
+
+
+
+.second
+{
+    font-family:myMickey;
+    
+ 
+}
+.first
+{
+    font-family:myRoboto;
+   
+   
+    
+}
+body{
+    background-color:  #F1F8E2;
+  
+    width: 600px;
+    
+}
