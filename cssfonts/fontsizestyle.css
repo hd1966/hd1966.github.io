@@ -1,5 +1,5 @@
 div{
-    background-image: linear-gradient(#FFDEDB,#FE8176) ;
+    background-image: linear-gradient(#DDE3FD,#798EF6) ;
     box-shadow: 5px 5px black;  
     padding: 10px;
     margin:  30px; 
@@ -25,35 +25,34 @@ font-weight: bold;
    
     
 }
-.fourth
+div.fourth
 {
     
     font-family:Arial, Helvetica, sans-serif;
     height: 100px;
-   
     
 }
 
 .ett
 {
-    font-weight: lighter;
+    font-size: 0.5em;
 }
 .tva
 {
-    font-weight: normal;
+    font-size: 1em;
 }
 .tre
 {
-    font-weight: bold;
+    font-size: 1.5em;
 }
 .fyra
 {
-    font-weight: bolder;
+    font-size: 2em;
 }
 
 
 body{
-    background-color:  #FFDEDB;
+    background-color: #DDE3FD;
   
     width: 400px;
     height: 400px;
