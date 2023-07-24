@@ -11,20 +11,20 @@ font-weight: bold;
 
 div.third{
     font-family:'Times New Roman', Times, serif;
-    height: 400px;
+    
   
 }
 .second
 {
     font-family: 'Courier New', Courier, monospace;
-    height: 400px;
+   
  
 }
 div.first
 {
     
     font-family:Arial, Helvetica, sans-serif;
-    height: 400px;
+   
    
     
 }
@@ -32,7 +32,7 @@ div.fourth
 {
     
     font-family:Arial, Helvetica, sans-serif;
-    height: 100px;
+   ;
    
     
 }
