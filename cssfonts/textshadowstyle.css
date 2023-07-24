@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lumanosimo&family=Tektur&display=swap');
+
+div{
+    background-image: linear-gradient(#FFE5DC,#FE9772) ;
+    box-shadow: 5px 5px black;  
+    padding: 10px;
+    margin:  30px; 
+}
+span{
+font-weight: bold;
+}
+
+
+div.third{
+    font-family: 'Bungee Spice', cursive;
+
+}
+div.second
+{
+    font-family: 'Lumanosimo', cursive;
+    
+    
+}
+div.first
+{
+    font-family: 'Tektur', cursive;
+ 
+}
+
+
+body{
+    background-color: #FFE5DC;
+    width: 600px;
+   
+}
