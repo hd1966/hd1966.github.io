@@ -1,0 +1,51 @@
+div{
+    background-image: linear-gradient(#FFDEDB,#FE8176) ;
+    box-shadow: 5px 5px black;  
+    padding: 10px;
+    margin:  30px; 
+}
+span{
+font-weight: bold;
+}
+
+
+.third{
+    font-family:Arial, Helvetica, sans-serif;
+  
+}
+.second
+{
+    font-family: 'Courier New', Courier, monospace;
+ 
+}
+.first
+{
+    
+    font-family:'Times New Roman', Times, serif;
+   
+    
+}
+.ett
+{
+    font-weight: lighter;
+}
+.tva
+{
+    font-weight: normal;
+}
+.tre
+{
+    font-weight: bold;
+}
+.fyra
+{
+    font-weight: bolder;
+}
+
+
+body{
+    background-color:  #FFDEDB;
+  
+    width: 400px;
+    height: 400px;
+}
