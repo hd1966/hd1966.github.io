@@ -1,35 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lumanosimo&family=Tektur&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=Great+Vibes&family=VT323&display=swap');
 
 div{
-    background-image: linear-gradient(#FFE5DC,#FE9772) ;
+    background-image: linear-gradient(#DEE9FC,#6395F2) ;
     box-shadow: 5px 5px black;  
     padding: 10px;
     margin:  30px; 
 }
 span{
-font-weight: bold;
+font-size:18px;
 }
 
 
 div.third{
-    font-family: 'Bungee Spice', cursive;
+
+    font-family: 'VT323', monospace; 
+    color: coral;
+    text-shadow: 0 0 10px #00ff00;
+ 
 
 }
 div.second
 {
-    font-family: 'Lumanosimo', cursive;
-    
+ 
+     font-family: 'Great Vibes', cursive;
+     text-shadow: 1px 1px 2px black,0 0 20px blue,0 0 7px darkblue;
     
 }
 div.first
 {
-    font-family: 'Tektur', cursive;
- 
+    font-family: 'Cabin Sketch', cursive;
+   
+    text-shadow: 4px 4px 4px #666666;
 }
 
 
 body{
-    background-color: #FFE5DC;
-    width: 600px;
+    background-color: #DEE9FC;
+    width: 400px;
    
 }
