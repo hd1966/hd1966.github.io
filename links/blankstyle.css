@@ -1,0 +1,19 @@
+a,h1,.second{
+    margin: 20px;
+}
+a{
+   
+   font-family:'Courier New',Courier, monospace;
+}
+.second
+{
+   background-color:#DEFF9C;
+   font-family:'Courier New',Courier, monospace;
+   font-size:1em;
+   
+}
+
+body{
+   background-color:  #DEFF9C;
+  
+}
