@@ -7,15 +7,14 @@ div{
     margin:  30px; 
 }
 span{
-font-size:18px;
+font-size:2em;
 }
 
 
 div.third{
 
     font-family: 'VT323', monospace; 
-    color: coral;
-    text-shadow: 0 0 10px #00ff00;
+    
  
 
 }
@@ -23,16 +22,28 @@ div.second
 {
  
      font-family: 'Great Vibes', cursive;
-     text-shadow: 1px 1px 2px black,0 0 20px blue,0 0 7px darkblue;
+  
     
 }
 div.first
 {
     font-family: 'Cabin Sketch', cursive;
    
-    text-shadow: 4px 4px 4px #666666;
+   
 }
 
+.ett{
+ text-shadow: 4px 4px 4px #666666;
+}
+.tva
+{
+    color: green;
+   text-shadow: 1px 1px 2px black,0 0 20px blue,0 0 7px darkblue;
+}
+.tre{
+color: coral;
+    text-shadow: 0 0 10px #00ff00;
+}
 
 body{
     background-color: #DEE9FC;
