@@ -1,5 +1,5 @@
 a{
-    margin: 20px;
+    
     font-family:'Courier New',Courier, monospace;
 }
 .second
@@ -7,9 +7,10 @@ a{
     background-color:#DEFF9C;
     font-family:'Courier New',Courier, monospace;
     font-size:1em;
-    margin: 20px;
+    
 }
 
 body{
     background-color:  #DEFF9C;
+    margin: 20px;
 }
