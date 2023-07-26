@@ -25,15 +25,6 @@ div:hover
     display:none;
     
 }
-
-div:hover::after{
-    content: 'Hover';
-}
-
-div:focus::after{
-    content: 'Active';
-}
-
 div:focus
 {
   
@@ -41,6 +32,15 @@ div:focus
     display:none;
    
 }
+div:hover:after{
+    content: 'Hover';
+}
+
+div:focus:after{
+    content: 'Active';
+}
+
+
 
 body{
    background-color:  #304408;
