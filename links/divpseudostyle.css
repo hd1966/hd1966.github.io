@@ -22,23 +22,39 @@ div:hover
 {
     border: 3px solid lightblue;
     color: blue;
-    display:none;
+   
     
 }
 div:focus
 {
   
     background-color:darkblue;
-    display:none;
+   
    
 }
-div:hover:after{
-    content: 'Hover';
+
+div p span{
+    position: relative;
+    content: 'Default';
 }
 
-div:focus:after{
-    content: 'Active';
+
+div:focus p span{
+     display:none;
 }
+
+div:focus p:after{
+    content: 'Focus';
+}
+
+div:hover p span{
+    display:none;
+}
+
+div:hover p:after{
+   content: 'Hover';
+}
+
 
 
 
