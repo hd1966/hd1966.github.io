@@ -1,0 +1,47 @@
+a,h1,h4{
+    margin: 20px;
+    display: block;
+}
+a,div{
+   
+   font-family:'Courier New',Courier, monospace;
+}
+#lorem span
+{
+   font-family:Helvetica, sans-serif;
+   font-size:1.2 em;
+   font-weight: bold;
+}
+
+#in span
+{
+   font-family:Times, serif;
+   font-size:1.2 em;
+   font-weight: bold;
+}
+
+#vivamus span
+{
+   font-family:Georgia, serif;
+   font-size:1.2 em;
+   font-weight: bold;
+}
+#ut span
+{
+   font-family: Calibri, serif;
+   font-size:1.2 em;
+   font-weight: bold;
+}
+#nulla span
+{
+   font-family:Cambria, serif;
+   font-size:1.2 em;
+   font-weight: bold;
+}
+
+body{
+   background-color:  #DEFF9C;
+  
+}
+
+ 
