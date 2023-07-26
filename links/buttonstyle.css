@@ -21,19 +21,25 @@ a:hover
     background-color: #41413f;
 }
  .ett{
+    border-left:10px ridge;
     border-left-color:red ;
+
  }
  .tva{
     border-left-color:yellow ;
+    border-left:10px ridge;
  } 
  .tre{
+    border-left:10px ridge;
     border-left-color:blue ;
  } 
  .fyra{
+    border-left:10px ridge;
     border-left-color:green ;
  }
 
 body{
+    
    background-color:  #83c00a;
   
 }
