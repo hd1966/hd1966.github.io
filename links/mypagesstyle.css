@@ -1,0 +1,13 @@
+a,h1,h2,div{
+    margin: 20px;
+    font-family:'Courier New',Courier, monospace;
+}
+
+
+
+body{
+   background-color:  #DEFF9C;
+   width: 500px;
+   padding: 20px;
+  
+}
