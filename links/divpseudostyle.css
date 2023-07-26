@@ -22,6 +22,7 @@ div:hover
 {
     border: 3px solid lightblue;
     color: blue;
+    display:none;
     
 }
 
@@ -37,6 +38,7 @@ div:active
 {
   
     background-color:darkblue;
+    display:none;
    
 }
 
