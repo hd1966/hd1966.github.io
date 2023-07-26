@@ -1,0 +1,31 @@
+h1,div{
+    margin: 20px;
+}
+
+div
+{
+   background-color:#DEFF9C;
+   font-family:'Courier New',Courier, monospace;
+   font-size:1em;
+   border: 3px solid white;
+   border-radius: 50px 20px;
+   text-align: center;
+   color: white;
+}
+
+div:hover
+{
+    border: 3px solid lightblue;
+    color: blue;
+}
+
+div:active
+{
+  
+    background-color:darkblue;
+}
+
+body{
+   background-color:  #DEFF9C;
+  
+}
