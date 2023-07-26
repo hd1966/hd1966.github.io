@@ -1,0 +1,38 @@
+a,h1{
+    margin: 20px;
+}
+a{
+   
+   font-family:'Courier New',Courier, monospace; 
+   font-size:1.2em;
+   border: 1px solid rgba(27, 26, 26, 0.123);
+   border-radius: 15px;
+   text-align: center;
+   color:blue;
+   font-weight: bold;
+   width:250px;
+   padding:5px;
+   background-color: #abaca9;
+  
+}
+a:hover
+{
+    background-color: #41413f;
+}
+ .ett{
+    border-left-color:red ;
+ }
+ .tva{
+    border-left-color:yellow ;
+ } 
+ .tre{
+    border-left-color:blue ;
+ } 
+ .fyra{
+    border-left-color:green ;
+ }
+
+body{
+   background-color:  #83c00a;
+  
+}
