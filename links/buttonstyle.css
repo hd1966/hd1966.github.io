@@ -27,9 +27,10 @@ a:hover
     border-left-color:red ;
 
  }
- .tva{
-    border-left-color:yellow ;
+ .tva{ 
     border-left:10px ridge;
+    border-left-color:yellow ;
+   
  } 
  .tre{
     border-left:10px ridge;
