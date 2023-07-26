@@ -4,13 +4,14 @@ h1,div{
 
 div
 {
-   background-color:#DEFF9C;
+   background-color:#304408;
    font-family:'Courier New',Courier, monospace;
    font-size:1em;
    border: 3px solid white;
    border-radius: 50px 20px;
    text-align: center;
    color: white;
+   width:100px;
 }
 
 div:hover
@@ -28,6 +29,6 @@ div:active
 }
 
 body{
-   background-color:  #DEFF9C;
+   background-color:  #304408;
   
 }
