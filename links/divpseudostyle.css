@@ -30,11 +30,11 @@ div:hover::after{
     content: 'Hover';
 }
 
-div:active::after{
+div:focus::after{
     content: 'Active';
 }
 
-div:active
+div:focus
 {
   
     background-color:darkblue;
