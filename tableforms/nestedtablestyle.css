@@ -18,9 +18,13 @@ table.main{
 
 tr:hover:nth-child(1)
 {
-    background-color: chocolate;
+    background-color: cadetblue
 }
 tr:hover:nth-child(2)
+{
+    background-color: hotpink
+}
+tr:hover:nth-child(3)
 {
     background-color: chocolate;
 }
