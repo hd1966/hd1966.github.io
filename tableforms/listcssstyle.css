@@ -1,0 +1,41 @@
+h1,ol,ul,dl{
+    margin: 20px;
+}
+
+ol,dl,li{
+    border:2px solid blue;
+    border-spacing:0;
+    width: 500px;
+    height:300px;
+    
+}
+ol{
+  list-style:lower-alpha inside;
+  counter-increment: Span-count 2;
+}
+
+ul{
+    list-style:disc hanging;
+}
+
+dl{
+    list-style:circled-alpha;
+}
+
+
+@counter-style circled-alpha {
+    system: fixed;
+    symbols: Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ Ⓕ Ⓖ Ⓗ Ⓘ Ⓙ Ⓚ Ⓛ Ⓜ Ⓝ Ⓞ Ⓟ Ⓠ Ⓡ Ⓢ Ⓣ Ⓤ Ⓥ Ⓦ Ⓧ Ⓨ Ⓩ;
+    suffix: " ";
+  }
+
+
+
+
+
+
+body{
+   counter-reset: Span-count -2;
+   background-color:  #DEFF9C;
+  
+}
