@@ -39,7 +39,7 @@ th{
     text-align:center;
     border-right:1px solid green;
 }
-th.main{
+th.main,td.total{
     font:bold,1.8em,Courier,monospace;
     color:#aa00ff;
     text-align:center;
