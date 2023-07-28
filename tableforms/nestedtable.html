@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>nested table</title>
+    <link rel="stylesheet" type="text/css" href="nestedtablestyle.css">
+</head>
+<body>
+<h1>Nästlad tabell</h1>
+<table class="main"><caption>Fruits/month</caption>
+    <th class="main">January</th>
+    <th class="main">February</th>
+    <th class="main">March</th>
+<tr><td><table>
+    <thead>
+      <tr>
+        <th>S.N</th>
+        <th>Item</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Apple</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Mango</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Orange</td>
+        <td>2</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">Total</td>
+        <td>10</td>
+      </tr>
+    </tfoot>
+</table></td>
+<td><table>
+    <thead>
+      <tr>
+        <th>S.N</th>
+        <th>Item</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Apple</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Mango</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Orange</td>
+        <td>1</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">Total</td>
+        <td>5</td>
+      </tr>
+    </tfoot>
+</table></td>
+<td><table>
+    <thead>
+      <tr>
+        <th>S.N</th>
+        <th>Item</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Apple</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Mango</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Orange</td>
+        <td>1</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">Total</td>
+        <td>10</td>
+      </tr>
+    </tfoot>
+</table></td></tr>
+<tr> <td colspan="2">Total</td>
+    <td>25</td>
+</tr>
+
+  </table>
