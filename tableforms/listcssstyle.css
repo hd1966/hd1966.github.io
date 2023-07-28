@@ -9,13 +9,21 @@ ol,dl,ul{
     
     
 }
-ol{
+ol.none{
   list-style:none;
   
 }
 
-ol.none>li:before{
-counter-increment: Span-count 2;
+ol.doublelist {
+    counter-reset: count -1;
+}
+
+ol.doublelist li {
+    counter-increment: count 2;
+}
+
+ol.doublelist li::marker {
+    content: counter(count, decimal) ') ';
 }
 
 
