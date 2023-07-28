@@ -10,8 +10,16 @@ ol,dl,ul{
     
 }
 ol{
-  list-style:decimal inside;
-  counter-increment: Span-count 2;
+  list-style:none;
+  
+}
+
+ol>li:before{
+counter-increment: Span-count 2;
+}
+
+ol.none{
+    list-style-type: none;
 }
 
 dl{
