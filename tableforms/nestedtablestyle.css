@@ -24,7 +24,7 @@ tr:hover:nth-child(2)
 {
     background-color: hotpink
 }
-tr:hover:nth-child(3)
+tr:hover:nth-child(0)
 {
     background-color: chocolate;
 }
