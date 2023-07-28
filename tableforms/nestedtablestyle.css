@@ -45,12 +45,7 @@ th.main{
     text-align:center;
     border-right:1px solid greenyellow;
 }
-td.total{
-    font:bold,1.8em,Courier,monospace;
-    color:#aa00ff;
-    text-align:center;
-    border-right:1px solid greenyellow;
-}
+
 
 tfoot
 {
