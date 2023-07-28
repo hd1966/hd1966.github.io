@@ -39,9 +39,16 @@ th{
     text-align:center;
     border-right:1px solid green;
 }
-th.main,td.total{
+th.main{
     font:bold,1.8em,Courier,monospace;
     color:#aa00ff;
+    text-align:center;
+    border-right:1px solid greenyellow;
+}
+
+td.total{
+    font:bold,1.8em,Courier,monospace;
+    color:darkorange;
     text-align:center;
     border-right:1px solid greenyellow;
 }
