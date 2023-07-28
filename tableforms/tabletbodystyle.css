@@ -19,6 +19,12 @@ th{
     text-align:center;
     border-right:1px solid green;
 }
+tfoot
+{
+    color:darkblue;
+    font:bold,Helvetica,sans-serif;
+}
+
 td{
     font:Helvetica,sans-serif;
     border-top:1px solid green;
