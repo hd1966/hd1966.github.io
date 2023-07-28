@@ -14,13 +14,11 @@ ol{
   
 }
 
-ol>li:before{
+ol.none>li:before{
 counter-increment: Span-count 2;
 }
 
-ol.none{
-    list-style-type: none;
-}
+
 
 dl{
     color:blueviolet;
