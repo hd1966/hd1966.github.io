@@ -2,7 +2,7 @@ h1,ol,ul,dl{
     margin: 20px;
 }
 
-ol,dl,li{
+ol,dl,ul{
     border:2px solid blue;
     border-spacing:0;
     width: 500px;
@@ -10,15 +10,15 @@ ol,dl,li{
     
 }
 ol{
-  list-style:lower-alpha inside;
+  list-style:decimal inside;
   counter-increment: Span-count 2;
 }
 
-ul{
+dl{
     list-style:disc hanging;
 }
 
-dl{
+ul{
     list-style:circled-alpha;
 }
 
