@@ -11,23 +11,23 @@
 <form action="submit.php" method="get">
   <fieldset>
     <legend>Login</legend>
-    <label for="username">Username*</label><!-- "for" targets "id" -->
+    <label for="username">Username:*</label><!-- "for" targets "id" -->
     <input type="text" id="username" name="username" required><br>
-    <label for="password">Password*</label>
+    <label for="password">Password:*</label>
     <input type="password" id="password" name="password" required pattern=".{4,}"><br>
   </fieldset>
  
   <fieldset>
     <legend>Gender*</legend>
-    <label><input type="radio" name="gender" value="m" required> Male</label>
-    <label><input type="radio" name="gender" value="f"> Female</label>
+    <label  for="male">Male</label><input id="male" type="radio" name="gender" value="m" required>
+    <label for="female">Female</label><input type="radio" name="gender" value="f">
   </fieldset>
  
   <fieldset>
     <legend>Programming Skill</legend>
-    <label><input type="checkbox" name="programming" value="java"> Java</label>
-    <label><input type="checkbox" name="programming" value="cpp" checked> C++</label>
-    <label><input type="checkbox" name="programming" value="csharp"> C#</label><br>
+    <label for="java"> Java</label><input id="java" type="checkbox" name="programming" value="java">
+    <label for="cplus">C++</label><input  id="cplus" type="checkbox" name="programming" value="cpp" checked> 
+    <label for="charp">C#</label><input id="csharp" type="checkbox" name="programming" value="csharp"><br>
   </fieldset>
  
   <fieldset>
