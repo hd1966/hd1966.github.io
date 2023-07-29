@@ -7,13 +7,14 @@ label{
      color: blue;
      display: inline-block;
      margin: 30px;
+     clear: left;
 
 }
 
 input{
     background-color:  white;
-    display: inline-block;
     width:200px;
+    float: left;
 }
 
 input.button{
