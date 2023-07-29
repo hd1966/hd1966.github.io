@@ -1,0 +1,41 @@
+h1,ol,ul,dl{
+    margin: 20px;
+}
+
+ol,dl,ul{
+    border:2px solid blue;
+    border-spacing:0;
+    width: 500px;
+    
+    
+}
+ol.none{
+  list-style:none;
+  
+}
+ol.romanlist{
+    list-style:upper-roman inside;
+}
+
+
+
+
+
+dl{
+    color:blueviolet;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+ul{
+    list-style:square hanging;
+}
+
+
+
+
+body{
+  
+   background-color:  #DEFF9C;
+  
+}
