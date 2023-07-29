@@ -26,6 +26,11 @@ input{
     width:200px;
     
 }
+input[type='radio'],input[type='checkbox']{
+    
+    width:20px;
+    
+}
 
 input.button{
   width: 100px;
