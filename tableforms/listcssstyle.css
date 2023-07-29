@@ -1,11 +1,13 @@
 h1{
     margin: 10px;
 }
-
+h2{
+    margin: 0px;
+}
 ol,dl,ul{
     border:2px solid blue;
-    border-spacing:0;
     width: 500px;
+    margin: 0px;
     
     
 }
