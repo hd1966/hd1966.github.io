@@ -11,9 +11,12 @@ label{
    
 
 }
+label.cr{
+  margin-right:1px;
+}
 
 fieldset{
-    width:500px;
+    width:400px;
 }
 legend
 {
