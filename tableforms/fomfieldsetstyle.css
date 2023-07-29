@@ -1,0 +1,39 @@
+h1,input{
+    margin: 20px;
+}
+
+label{
+     width: 100px;
+     color: blue;
+     display: inline-block;
+     margin: 10px;
+     font-size: 1.2em;
+   
+
+}
+legend
+{
+    color:blueviolet;
+    background-color: antiquewhite;
+    width: 200px;
+}
+input{
+    background-color:  white;
+    width:200px;
+    
+}
+
+input.button{
+  width: 100px;
+  
+}
+
+
+
+
+
+body{
+  
+   background-color:  #DEFF9C;
+  
+}

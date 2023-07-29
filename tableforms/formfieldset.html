@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- HtmlFormEx2.html -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Input Validation</title>
+</head>
+ 
+<body>
+<form action="submit.php" method="get">
+  <fieldset>
+    <legend>Login</legend>
+    <label for="username">Username*</label><!-- "for" targets "id" -->
+    <input type="text" id="username" name="username" required><br>
+    <label for="password">Password*</label>
+    <input type="password" id="password" name="password" required pattern=".{4,}"><br>
+  </fieldset>
+ 
+  <fieldset>
+    <legend>Gender*</legend>
+    <label><input type="radio" name="gender" value="m" required> Male</label>
+    <label><input type="radio" name="gender" value="f"> Female</label>
+  </fieldset>
+ 
+  <fieldset>
+    <legend>Programming Skill</legend>
+    <label><input type="checkbox" name="programming" value="java"> Java</label>
+    <label><input type="checkbox" name="programming" value="cpp" checked> C++</label>
+    <label><input type="checkbox" name="programming" value="csharp"> C#</label><br>
+  </fieldset>
+ 
+  <fieldset>
+    <legend>Fruit</legend>
+    Choose a fruit:
+    <select name="fruit">
+      <option value="apple">Apple</option>
+      <option value="banana" selected>Banana</option>
+      <option value="orange">Orange</option>
+    </select>
+  </fieldset>
+  <fieldset>
+    <legend>Fruit</legend>
+  <textarea name="comment" placeholder="Enter your comment here" rows="5" cols="40" maxlength="180"></textarea><br>
+  </fieldset>
+ 
+  <input type="submit" value="Send">
+ 
+</form>
+</body>
+</html>
