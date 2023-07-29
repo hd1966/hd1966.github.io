@@ -12,11 +12,12 @@ label{
 
 input{
     background-color:  white;
+    display: inline-block;
     width:200px;
 }
 
 input.button{
-  list-style:none;
+  width: 100px;
   
 }
 
