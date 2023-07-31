@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>css kombinationsselektorer</title>
+    <style>
+         h5 + p{
+             color: blue;
+             font:bold,'Courier New', Courier, monospace sans-serif;
+         }
+         div > h3{
+             color: red;
+             font:bold,'Courier New', Courier, monospace sans-serif;
+         }
+         div h4 {  
+                color: green;
+                font-family: sans-serif;
+                font-weight: bold;
+ }
+ p~h6 {  
+                color: yellow;
+                font-family: sans-serif;
+                font-weight: bold;
+ }
+ div{
+    margin:20px;
+ }
+        </style>
+    
+</head>
+<body>
+    <h3>CSS kombinationselektorer</h3>
+    <h4>Angränsande-syskon-selektor</h4>
+    <div>
+        <h5>Det är ett h5 element.</h5>
+        <p>Detta p element är omedelbart efter h5 element.</p>
+        <hr>
+        <p>Detta p element är inte omedelbart efter ett h5 element.</p>
+        <hr>
+        <h5>Det är ett h5 element.</h5>
+        <p>Detta p element är omedelbart efter h5 element.</p>
+    </div>
+    <h4>Barnselektor</h4>
+    <div>
+        <h3>Detta h3 element är ett barn av ett div element.</h3>
+        <p>Det är ett p element.</p>
+        <button>
+        <h3>Detta h3 element är inte ett barn av ett div element. Det är ett barnbarn av div element</h3>
+        </button>
+        
+    </div>
+    <h4>Avkomlingsselektor</h4>
+    <div>
+        <h4>Detta h4 element är en avkomling  av ett div element.</h4>
+        <button>
+        <h4>Detta h4 element är också en avkomling av ett div element. Det är ett barnbarn av div element</h4>
+        </button>
+    </div>
+    <h4>Syskon-selektor</h4>
+    <div>
+        <p>Det är ett p element.</p>
+        <h6>Detta h6 element är ett syskon av ett p element.<h6>
+        <h6>Detta h6 element är också ett syskon av ett p element.<h6>
+            <button>
+                <h6>Detta h6 element är inte ett syskon av ett p element. </h6>
+                </button>
+    </div>
+   
+</body>
+</html>
