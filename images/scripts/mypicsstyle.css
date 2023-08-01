@@ -1,0 +1,41 @@
+h1{
+    margin: 20px;
+}
+
+div{
+   box-shadow: 7px 7px;
+   float:left;
+   
+}
+
+.first
+{
+   border:2px solid red;
+   
+      
+}
+
+.second
+{
+   border:2px solid green;
+   
+      
+}
+.third
+{
+   border:2px solid blue;
+   
+      
+}
+
+figcaption{
+   width: 200px;
+   text-align: center;
+   font-style: italic;
+   font-size: 24px;
+}
+
+body{
+   background-color:  #DEFF9C;
+  
+}
