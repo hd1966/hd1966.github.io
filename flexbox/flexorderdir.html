@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Haris Bakery</title>
+<style>
+
+.head{
+    font-family: 'Courier New', Courier, monospace;
+    display:flex; 
+    justify-content: center;
+    height: 12em;
+    align-content: center;
+}
+.article
+{
+    order:2;
+    background-color: aqua;
+    flex-grow: 3;
+}
+#news
+{
+    order:1;
+    background-color: lightcoral;
+    flex-grow: 1;
+}
+#contact
+{
+    order:3;
+    background-color: lightgray;
+    flex-grow: 1;
+}
+p.header{
+    font-size: 32px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 0.3em;
+    background-color: brown;
+    height: 4em;
+    text-align:center;
+    line-height:4em;
+    margin:0px;
+}
+p.footer{
+    font-size: 8px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: blueviolet;
+    padding: 20px;
+    text-align: right;
+    margin:0px;
+}
+
+</style>
+</head>
+
+<body>
+    <p class="header">Hip & happening inline</p>
+    <div class="head">
+     <div class="article"><h2>Where It's At</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+         In eget tristique elit. Etiam euismod dictum lectus, ut efficitur diam tristique facilisis. 
+         Cras sem tortor, dignissim at massa ut, fermentum molestie ligula. Mauris purus nisi, lacinia ac sem id, 
+         pretium sagittis mi. Nunc ultricies odio id ipsum bibendum, non posuere nisl consequat. Aliquam non pellentesque velit. 
+         Quisque sit amet pretium odio. In convallis quis lectus non laoreet. Integer non erat quis eros elementum ultricies quis in tellus. </p></div>
+     <div id="news"><h2>News</h2></div>
+     <div id="contact"><h2>Contact</h2></div>
+    </div> 
+ 
+ <p class="footer">The small print</p>
+  
+ 
+</header>
+</body>
+</html>
