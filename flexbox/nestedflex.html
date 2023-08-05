@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nestedflexbox</title>
+<style>
+.wrapper { 
+  display: flex;
+  }
+.second {
+  display: flex;
+  flex-direction: column;
+}
+.green {
+  background: yellowgreen;
+}
+.blue {
+  background: steelblue;
+}
+.wrapper div {
+  font-size: 5vw;
+  padding: .5em;
+  color: white;
+  background:blue;
+  flex: 1;
+}
+
+.second>div {
+  font-size: 5vw;
+  padding: .5em;
+  color: black;
+  flex: 1;
+}
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="second">1
+    <div class="green">1a</div>
+    <div class="blue">1b</div>
+  </div>
+  <div class="green">2</div>
+  <div class="blue">3</div>
+</div>
+<div class="wrapper">
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+</div>
+<div class="wrapper">
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+</div>
+</body>
+</html>
