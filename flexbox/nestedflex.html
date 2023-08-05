@@ -6,6 +6,8 @@
 <style>
 .wrapper { 
   display: flex;
+  font-size: 2em;
+  text-align: center;
   }
 .second {
   display: flex;
@@ -14,26 +16,25 @@
 #green {
   background: yellowgreen;
 }
-#blue {
-  background: steelblue;
+#red {
+  background: lightcoral;
 }
-.wrapper div {
-  font-size: 5vw;
+.wrapper>div {
+  
   padding: .5em;
   color: white;
   background:blue;
-  padding:0.5em;
-  margin:0.5em;
+  padding:0.2em;
+  margin:0.3em;
   flex: 1;
 }
 
 .second>div {
-  font-size: 5vw;
   padding: .5em;
   color: black;
   border-radius: 5px;
   padding:0.2em;
-  margin:0.2em;
+  margin:0.1em;
   flex: 1;
 }
 
@@ -43,7 +44,7 @@
 <div class="wrapper">
   <div class="second">1
     <div id="green">1a</div>
-    <div id="blue">1b</div>
+    <div id="red">1b</div>
   </div>
   <div>2</div>
   <div>3</div>
