@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Align item</title>
+    <style>
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .first{
+        align-items: stretch;
+    }
+    .second{
+        align-items:flex-end;
+    }
+    .third{
+        align-items:flex-start;
+    }
+    .fourth{
+        align-items:center;
+    }
+    .cards img {
+        margin: 10px;
+        border: 3px solid #000;
+        box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3); 
+        max-width: 25vw;
+    }
+    </style>
+</head>
+<body>
+    <h1>Align-items with stretch,flex-end,flex-start,center</h1>
+    <div class="cards first">
+    <img src="foto1.jpg" alt="Sample photo">
+    <img src="foto2.jpg" alt="Sample photo">
+    <img src="foto3.jpg" alt="Sample photo">
+    </div>
+    <div class="cards second">
+        <img src="foto1.jpg" alt="Sample photo">
+        <img src="foto2.jpg" alt="Sample photo">
+        <img src="foto3.jpg" alt="Sample photo">
+    </div>
+    <div class="cards third">
+        <img src="foto1.jpg" alt="Sample photo">
+        <img src="foto2.jpg" alt="Sample photo">
+        <img src="foto3.jpg" alt="Sample photo">
+    </div>
+    <div class="cards fourth">
+        <img src="foto1.jpg" alt="Sample photo">
+        <img src="foto2.jpg" alt="Sample photo">
+        <img src="foto3.jpg" alt="Sample photo">
+    </div>
+</body>
+</html>
