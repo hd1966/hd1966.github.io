@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+<title>flexBasisRelative</title>
+<style>
+.container { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+} 
+.container > div {
+  font-size: 5em;
+  padding: .5em;
+  color: white;
+  margin: 10px;
+  border-radius: 3px;
+  background: yellow;
+  border: 5px solid black;
+}
+.container > div:nth-child(odd) {
+  flex:1 10%;
+  align-self: center;
+  }
+.container > div:nth-child(even) {
+    flex:1 20%;
+    align-self: flex-start;
+  }
+.eighth ,.fifth,.second {
+    flex:1 40%;
+    align-self: flex-end;
+  }  
+
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="odd">1</div>
+  <div class="even second">2</div>
+  <div class="odd">3</div>
+  <div class="even">4</div>
+  <div class="odd fifth">5</div>
+  <div class="even">6</div>
+  <div class="odd">7</div>
+  <div class="even eighth">8</div>
+  <div class="odd">9</div>
+  <div class="even">10</div>
+  </div>
+</body>
+</html>
