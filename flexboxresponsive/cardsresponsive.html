@@ -13,34 +13,24 @@
     display: flex;
     border-radius: 10px;
     align-items: stretch;
-    flex-direction: column; 
     height:600px;  
   }
  img {
     
     margin:10px;
     box-shadow: 3px 3px  red; 
-    flex:1;
+    flex:1 100%;
 
    
   }
   
   @media screen and (min-width: 400px) {
-    .wrapper{
-        flex-direction: row;  
-        
-    }
-   	.first {
-    	flex: 1 1000px;  
-   }
-   .second,.third {
+    .second,.third {
     	flex: 1 0 0;  
    }
   }
  @media screen and (min-width: 900px) {
-   	.wrapper  {
-        flex-direction: row;  
-   }
+   
   img{
     	flex: 1;  
    }
