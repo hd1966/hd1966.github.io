@@ -13,7 +13,7 @@
     display: flex;
     border-radius: 10px;
     align-items: stretch;
-    height:600px;  
+    flex-direction: column-reverse;   
   }
  img {
     
@@ -25,11 +25,18 @@
   }
   
   @media screen and (min-width: 400px) {
+    .wrapper{
+    flex-direction: row;
+   }
     .second,.third {
-    	flex: 1 0 0;  
+    	flex: 1 0 0px;  
    }
   }
  @media screen and (min-width: 900px) {
+   .wrapper{
+    flex-direction: row;
+   }
+
    
   img{
     	flex: 1;  
