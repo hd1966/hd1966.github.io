@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Form responsive</title>
+<style>
+  .wrapper {
+    background-color: lightgreen;
+    display: flex;
+    padding: 0;
+    border-radius: 10px;
+    align-items: stretch;
+    flex-direction: column-reverse;  
+  }
+  image {
+    box-shadow: 5p 5px lightsalmon;
+    padding: 10px;
+  }
+  
+  @media screen and (min-width: 400px) {
+    .wrapper{
+        flex-direction: row;  
+    }
+   	.first {
+    	flex: 1 100%;  
+   }
+  }
+ @media screen and (min-width: 900px) {
+   	.wrapper  {
+        flex-direction: row;  
+   }
+   image{
+    flex: 1;
+   }
+  }
+
+</style>
+</head>
+<body>
+<form>
+  <div class="wrapper">
+   <img class="first"  src="../flexbox/foto1.jpg">
+   <img class="second" src="../flexbox/foto2.jpg">
+   <img class="third"  src="../flexbox/foto3.jpg">
+  </body>
+  </html>
