@@ -13,7 +13,7 @@
     display: flex;
     flex-wrap: wrap;
     border-radius: 10px;
-    align-items: stretch;
+    flex-direction: column-reverse
      
   }
  img {
@@ -36,8 +36,16 @@
   }
  @media screen and (min-width: 900px) {
    
-   
-   
+  .first{
+    order:2;
+  } 
+  .second{
+    order:3;
+  } 
+  .third{
+    order:1;
+  } 
+     
   img{
     	flex: 1 0 0px; 
    }
@@ -48,9 +56,9 @@
 <body>
 
   <div class="wrapper">
-   <img class="first"  src="../flexbox/foto1.jpg">
-   <img class="second" src="../flexbox/foto2.jpg">
-   <img class="third"  src="../flexbox/foto3.jpg">
+   <img class="first"  src="foto1s.png">
+   <img class="second" src="foto2.png">
+   <img class="third"  src="foto3s.png">
    </div>
   </body>
   </html>
