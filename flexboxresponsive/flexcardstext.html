@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LoremFlex</title>
+    <style>
+
+
+.wrapper {
+  display: flex;  
+  flex-wrap: wrap;
+  font-weight: bold;
+  text-align: center;
+  flex-direction:column-reverse; 
+}
+/* We tell all items to be 100% width, via flex-basis */
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+  box-shadow: 5px 5px black;
+}
+/* We rely on source order for mobile-first approach
+ * in this case:
+ * 1. header
+ * 2. article
+ * 3. aside 1
+ * 4. aside 2
+ * 5. footer
+ */
+.header {
+  background: lightcoral;
+}
+
+.footer {
+  background: lightgreen;
+}
+
+.main {
+  text-align: left;
+  background: lightskyblue;
+}
+
+.aside-1 {
+  background: gold;
+}
+
+.aside-2 {
+  background: lightgoldenrodyellow;
+}
+
+.aside-3 {
+  background: lightsalmon;
+}
+
+
+
+
+/* Medium screens */
+@media all and (min-width: 500px) {
+    /* We tell both sidebars to share a row */
+  .aside { flex: 1 0 0; }
+}
+ /* LARGE SCREENS*/
+
+@media all and (min-width: 800px) {
+     /* We invert order of first sidebar and main
+   * And tell the main element to take twice as much width as the other two sidebars 
+   */
+  .main    { flex: 4 0px; }
+  .aside-1 { order: 2; } 
+  .main    { order: 4; }
+  .aside-2 { order: 1; }
+  .aside-3 { order: 3; }
+  .footer  { order: 5; }
+}
+
+body {
+  padding: 2em; 
+}
+
+
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="header">Beginning</div>
+    <div class="main">
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+    </div>
+    <img src="foto3s.png" class="aside aside-1">
+    <div class="aside aside-2">Aside section 1</div>
+    <div class="aside aside-3">Aside section 2</div>
+    <div class="footer">This is the end.</div>
+  </div>
+</body>
+</html>
