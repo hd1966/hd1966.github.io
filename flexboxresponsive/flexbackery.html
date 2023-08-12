@@ -6,9 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+.all{
+  display:flex;
+  flex-direction: column;
+}
 /* nav styles */
 .nav{
   display:flex;
+  flex-direction: column;
 }
 ul, .footer {
   color: white;
@@ -36,13 +41,13 @@ li {
   font-size: .8em;
   text-transform: uppercase;
   letter-spacing: .2em;
+  line-height: 100%;
 } 
 
 
 /* main "products" styles */
 .main {
   background-color: white;
-  line-height: 1.8em;
   color: #555;
   padding: 1em;
   border: double 4px #EADDC4;
@@ -62,15 +67,14 @@ h3 {
 }
 .item {
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
   color: #783F27;
   font:.8em verdana, sans-serif;
   text-transform: uppercase;
   justify-content: flex-start;
 }
 .imgpara,.itempara,.item{
-    flex:1 100%;
-    margin: 1em 0;
+     margin: 1em 0;
 }
 
 
@@ -96,41 +100,42 @@ h3 {
 </head>
 
 <body>
-<div class="nav"> 
-  <ul>
-      <li>Menu</li>
-      <li>Nyheter</li>
-      <li>Om</li>
-      <li>Kontakta oss</li>
-  </ul> 
-  <img  class="meny" src="../flexbox/logo.png" alt="bageriet"> 
-</div>
- 
-<div class="main">
-  <h2>Ugnsfärska</h2>
-  <h3>Bröd</h3>
-  <div class="item"><img src="bread.png" alt="rund brödlimpa" class="imgpara"><p class="itempara"> Våra bröd görs dagligen av fullkornsmjöl av högsta kvalitet. 
-    Enkelt och naturligt, och aldrig några konserveringsmedel. 
-    Finns i fullkorn, surdeg, olivlimpa, klassisk råg och potatislök..</p>
-   </div>
-
-  <h3>Muffins</h3>
-  <div class="item"></div><img src="muffin.png" alt="chokladmuffin" class="imgpara"> <p class="itempara">Varje dag erbjuder vi ett stort urval av muffins, inklusive blåbär, 
-    multibär, kli, majs, citron-vallmofrön och choklad. Kom förbi för att se våra säsongsbetonade muffinssmaker!</p>
+<div class="all">
+  <div class="nav"> 
+    <ul>
+        <li>Menu</li>
+        <li>Nyheter</li>
+        <li>Om</li>
+        <li>Kontakta oss</li>
+    </ul> 
+    <img  class="meny" src="../flexbox/logo.png" alt="bageriet"> 
+  </div>
+  
+  <div class="main">
+    <h2>Ugnsfärska</h2>
+    <h3>Bröd</h3>
+    <div class="item"><img src="bread.png" alt="rund brödlimpa" class="imgpara"><p class="itempara"> Våra bröd görs dagligen av fullkornsmjöl av högsta kvalitet. 
+      Enkelt och naturligt, och aldrig några konserveringsmedel. 
+      Finns i fullkorn, surdeg, olivlimpa, klassisk råg och potatislök..</p>
     </div>
 
+    <h3>Muffins</h3>
+    <div class="item"></div><img src="muffin.png" alt="chokladmuffin" class="imgpara"> <p class="itempara">Varje dag erbjuder vi ett stort urval av muffins, inklusive blåbär, 
+      multibär, kli, majs, citron-vallmofrön och choklad. Kom förbi för att se våra säsongsbetonade muffinssmaker!</p>
+      </div>
+
+  </div>
+
+  <div class="aside">
+    <h2>Öppet tider:</h2>
+    <p><span class="day">Måndag - Fredag:</span> 06.00 - 15.00</p>
+    <p><span class="day">Lärdag - Söndag:</span> 07.00 - 16.00</p>
+  </div>
+
+  <div class="footer">
+  <p>copyright 2023, Haris bageri.</p>
+  </div>
 </div>
-
-<div class="aside">
-  <h2>Öppet tider:</h2>
-  <p><span class="day">Måndag - Fredag:</span> 06.00 - 15.00</p>
-  <p><span class="day">Lärdag - Söndag:</span> 07.00 - 16.00</p>
-</div>
-
-<div class="footer">
-<p>copyright 2023, Haris bageri.</p>
- </div>
-
 
 </body>
 </html>
