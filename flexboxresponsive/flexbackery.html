@@ -7,6 +7,9 @@
 
 <style>
 /* nav styles */
+.nav{
+  display:flex;
+}
 ul, .footer {
   color: white;
   background-color: #783F27;
@@ -23,17 +26,16 @@ ul {
   background-size: cover; 
   height: 6em;
 }
-li {
-  font-size: .8em;
-  text-transform: uppercase;
-  letter-spacing: .2em;
-}
+
 li { 	
-  flex:1;	
+  flex:1 100%;	
   border: 1px solid; 	
   border-radius: .5em; 	
   padding: .5em 1em; 	
   margin: .5em; 
+  font-size: .8em;
+  text-transform: uppercase;
+  letter-spacing: .2em;
 } 
 
 
@@ -94,14 +96,16 @@ h3 {
 </head>
 
 <body>
-<ul>
+<div class="nav"> 
+  <ul>
       <li>Menu</li>
       <li>Nyheter</li>
       <li>Om</li>
       <li>Kontakta oss</li>
-      <img  class="meny" src="../flexbox/logo.png" alt="bageriet">
-</ul>
-  
+  </ul> 
+  <img  class="meny" src="../flexbox/logo.png" alt="bageriet"> 
+</div>
+ 
 <div class="main">
   <h2>Ugnsfärska</h2>
   <h3>Bröd</h3>
