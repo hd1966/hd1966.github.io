@@ -19,7 +19,7 @@ ul {
   list-style-type: none;
   display: flex;
   justify-content: center;
-  background:  url(images/croissants_banner.jpg) no-repeat center center;
+  background:  url(../flexbox/croissants.jpg) no-repeat center center;
   background-size: cover; 
   height: 15em;
 }
@@ -29,7 +29,7 @@ li {
   letter-spacing: .2em;
 }
 li { 	
-  display: block; 	
+  flex:1;	
   border: 1px solid; 	
   border-radius: .5em; 	
   padding: .5em 1em; 	
@@ -57,16 +57,7 @@ h3 {
   padding-left: 1em;
   margin-top: 2.5em;
 }
-p.more {
-  font-family: verdana, sans-serif;
-  text-transform: uppercase; 
-  font-size: .8em;
-  clear: left;
-}
-.main img {
-  float: left;
-  margin: 0 1em 1em 0;
-}
+
 
 /* aside "hours" styles */
 .aside {
@@ -93,7 +84,8 @@ p.more {
   justify-content: flex-start;
 }
 .imgpara,.itempara{
-    flex:1;
+    flex:1 100%;
+    margin: 1em 0;
 }
 
 </style>
