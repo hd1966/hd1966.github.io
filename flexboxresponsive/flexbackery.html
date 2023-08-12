@@ -99,17 +99,13 @@ h1 {
     flex-direction: column;
 }
 /* Medium screens */
-@media all and (min-width: 400px) {
+@media all and (min-width: 600px) {
     /* We tell both sidebars to share a row */
     
     .nav{
         flex-direction:row-reverse;
         flex-wrap: wrap;
-        height: 8em;
-        margin-top:0px;
-    }
-    ul,.menu{
-      flex:1 100;
+         margin-top:0px;
     }
     ul{
       flex-direction:row;
@@ -120,32 +116,18 @@ h1 {
       flex:1;
     align-self: center;
    }
-    .main{
-      margin-top: 90px;
-    }
-    .aside{
+   .aside{
       text-align: center;
     }
     .asideItem{
       margin:1em;text-align: left;
     }
-  
-  
-}
- /* LARGE SCREENS*/
-
-@media all and (min-width: 800px) {
-     /* We invert order of first sidebar and main
-   * And tell the main element to take twice as much width as the other two sidebars 
-   */
-   .nav
+     .nav
    {
     height: 4em;
-    
-
    }
    .main{
-      margin-top: 150px;
+      margin-top: 120px;
     }
    ul{
     line-height: 4em;
