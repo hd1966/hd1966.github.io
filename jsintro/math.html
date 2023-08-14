@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+  <html lang="en"> 
+  <head> 
+    <title>JavaScript Math Object</title> 
+   <style> 
+     body{ font:18px bold Helvetica,sans-serif; }
+   </style>
+  <script>
+    var  heltal = prompt("Mata in heltal: ", "");
+    var heltalParsed = Number.parseInt(heltal, 10);
+  if (!Number.isNaN(heltalParsed)) {
+    document.write("Number is <b> " + heltalParsed+ "</b></br>");
+    document.write("log10 is <b> " + Math.log(heltalParsed).toFixed(2)+ "</b></br>");
+    document.write("sqrt is <b>" + Math.sqrt(heltalParsed).toFixed(2)+ "</b></br>");
+    document.write("Value of PI is <b>" + Math.PI.toFixed(2)+ "</b></br>");
+    document.write("Power to 2 is <b>" + Math.pow(heltalParsed,2).toFixed(2)+ "</b></br>");
+    document.write("Sin is <b>" + Math.sin(heltalParsed,2).toFixed(2)+ "</b></br>");
+    document.write("Random between 5 and 15 <b> " +getRandomArbitrary(5, 15).toFixed(2)+ "</b></br>");
+  }
+    
+    function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}
+  </script>
+  </head> 
+   <body> 
+   </body>
+</html>
