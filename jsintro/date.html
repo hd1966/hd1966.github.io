@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaScript Date Object</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <style>body{font:italic 26px Verdana,serif;} span{font-weight:bold;}</style>
+    <script>
+var now = new Date();
+document.write("<span>Datum : </span>" + now + "<br>");
+
+var specificDate = new Date(Date.parse("Aug 30, 2014"));
+document.write("<span>Specifikt datum: </span> "+specificDate+ "<br>");
+  
+ var hrs = now.getHours();
+ var minutes = now.getMinutes();
+ var seconds = now.getSeconds();
+ var year = now.getFullYear();
+  
+ document.write("<span>År: </span> " + year + "<br>");
+ document.write("<span>Tid: </span> " + hrs 
+                + ":" + minutes + ":" + seconds );
+               
+var targetDate = new Date("December 31," + year);
+var daysLeft = targetDate.getTime() - now.getTime();
+var targetDay = Math.floor(daysLeft / (1000*60*60*24));
+        
+document.write("<br/>Nytt år är  <span>" 
+                + targetDay + "</span> dagar ifrån.<br>");
+
+
+   </script>
+</head>
+<body>
+
+</body>
+</html>
