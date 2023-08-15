@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head><title>Javascript Form Events</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <style>
+        input[type=button]
+        {
+            background-color: lightblue;
+            margin-top: 20px;
+        }
+        input[type=text]
+        {
+            color:red;
+            margin-top: 20px;
+        }
+        label{
+            margin-right: 30px;
+            font-weight: bold;
+            font-size: 16px;;
+        }
+    </style>
+   <script>
+     function validateF(iform){
+       alert("Värde från Exempel textfält är :" + 
+             iform.elements['exempelstring'].value );
+     }
+      function Japan(){
+       alert("Moshimoshi");
+     }
+     
+     function India(){
+       alert("Namaste");
+     }
+     
+     function China(){
+       alert("Ni hao");
+     }
+   
+       function fieldN(x){
+        x.style.background = "yellow";
+     }
+     
+      function city1(x){
+        x.style.background = "green";
+     } 
+     function defaultColor(x){
+        x.style.background = "white";
+     } 
+   </script>
+    
+    </head>
+<body>
+ <hr>
+  <form name ="demo_form">
+    <p>
+      <label for="ex">Exempel:</label> 
+      <input type="text" name="exempelstring" size="50" id="ex" />
+    </p>
+    
+    <input type="button"
+           value="skriv ut exempelfield värde"
+    onclick="validateF(document.forms['demo_form']);" /> 
+    
+     <p>Hej i olika länder</p>
+     <input type="button" value="Japan"
+    onclick ="Japan()" />
+    
+    <input type="button" value="Indien"
+    onclick ="India()" />
+    
+    <input type="button" value="Kina"
+    onclick ="China()" />
+<!-- Reference to the form object using this keyword ---->
+     <p><label for="nm">Namn:</label>   <input type="text" size="40" 
+    onfocus ="fieldN(this)" onblur="defaultColor(this)" id="nm" /></p>
+    
+   
+   <p><label for="ct">Stad:</label> <input name="city" onfocus="city1(this)" onblur="defaultColor(this)" id="ct" /></p>
+   
+
+  </form>
+</body>
+</html>
