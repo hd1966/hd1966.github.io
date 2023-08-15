@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <title>JavaScript Forms: Select Background Color</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<style>
+  body{font-family:Verdana; background:#F1684E;color:#fff;}
+</style>
+ <script>
+    function bkground(col){
+      for(var i=0; i < col.color.length; i++){
+        if(col.color[i].checked){
+          document.getElementById("b").style.backgroundColor = col.color[i].value;
+        }
+      }
+    }
+ </script>
+</head>
+
+<body id="b">
+<form name="radioform">
+  Selekt bakgrundsfärg? <br>
+  <input type="radio" name="color" 
+         value="#11ff00" />Grön<br>
+    <input type="radio" name="color" 
+         value="#aacd00" /> RedGrön <br>
+    <input type="radio" name="color" 
+         value="#7fffd4" /> Akvamarin -  almost grönblå<br>
+    <input type="radio" name="color" 
+         value="#5511e6" /> Blå <br>
+    <input type="radio" name="color" 
+         value="#aa11aa" />Redblå<br>
+  
+  <input type="button" value="Selekt Färg"
+  onClick="bkground(this.form)" />
+  <input type="reset" />
+ 
+</form>
+ </body>
+ 
+</html>
