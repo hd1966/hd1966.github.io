@@ -17,6 +17,10 @@
         }
       }
     }
+
+    function bkgroundReset(){
+        document.getElementById("b").style.backgroundColor="#f1684e";
+    }
  </script>
 </head>
 
@@ -37,7 +41,7 @@
   
   <input type="button" value="Selekt Färg"
   onClick="bkground(this.form)" >
-  <input type="reset" >
+  <input type="reset" onClick="bkgroundReset()">
  
 </form>
  </body>
