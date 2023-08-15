@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
   <head><title>Javascript Form Events</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <style>
@@ -16,7 +16,10 @@
         label{
             margin-right: 30px;
             font-weight: bold;
-            font-size: 16px;;
+            font-size: 24px;
+        }
+        .stad{
+            margin-right: 35px;
         }
     </style>
    <script>
@@ -75,7 +78,7 @@
     onfocus ="fieldN(this)" onblur="defaultColor(this)" id="nm" /></p>
     
    
-   <p><label for="ct">Stad:</label> <input name="city" onfocus="city1(this)" onblur="defaultColor(this)" id="ct" /></p>
+   <p><label for="ct" class="stad">Stad:</label> <input name="city" onfocus="city1(this)" onblur="defaultColor(this)" id="ct" /></p>
    
 
   </form>
