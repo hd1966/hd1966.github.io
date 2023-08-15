@@ -5,6 +5,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
 <style>
   body{font-family:Verdana; background:#F1684E;color:#fff;}
+  p,input{
+    font-size: 28px;
+  }
 </style>
  <script>
     function bkground(col){
@@ -17,23 +20,24 @@
  </script>
 </head>
 
-<body id="b">
+<body id="b"> 
+    <p>Selekt bakgrundsfärg?</p> 
 <form name="radioform">
-  Selekt bakgrundsfärg? <br>
+ 
   <input type="radio" name="color" 
-         value="#11ff00" />Grön<br>
+         value="#11ff00" >Grön<br>
     <input type="radio" name="color" 
-         value="#aacd00" /> RedGrön <br>
+         value="#aacd00" > RedGrön <br>
     <input type="radio" name="color" 
-         value="#7fffd4" /> Akvamarin -  almost grönblå<br>
+         value="#7fffd4" > Akvamarin -  almost grönblå<br>
     <input type="radio" name="color" 
-         value="#5511e6" /> Blå <br>
+         value="#5511e6" > Blå <br>
     <input type="radio" name="color" 
-         value="#aa11aa" />Redblå<br>
+         value="#aa11aa" >Redblå<br>
   
   <input type="button" value="Selekt Färg"
-  onClick="bkground(this.form)" />
-  <input type="reset" />
+  onClick="bkground(this.form)" >
+  <input type="reset" >
  
 </form>
  </body>
