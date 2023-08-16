@@ -1,0 +1,54 @@
+<!DOCTYPE HTML> 
+ <html lang="en"> 
+   <head> 
+     <title>JavaScript:  History objekt funktioner </title> 
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+     <style>
+        button,p{
+            margin-top: 30px;
+            color: brown;
+            font-size: 28px;
+            display:block;
+            padding:10px;
+            width:300px;
+            
+        }
+        button{
+            text-align: center;
+        }
+      </style> 
+      <script> 
+
+    function goBack(){
+         window.history.back(); 
+    }
+
+
+     function goForward(){
+        window.history.forward(); 
+     } 
+
+    function handleGo() 
+    { 
+              window.history.go("https://www.hitta.se"); 
+                          
+    } 
+
+    function length()
+    {
+        document.getElementById("l").innerHTML="<b>Length: </b> " + window.history.length;
+    }
+
+
+                </script> 
+    </head> 
+    <body> 
+        <button id="back" onclick="goBack()">Tillbaka</button> <br/>
+        <button id="forward" onclick="goForward()">Framåt</button> <br/>
+        <button id="go" onclick="handleGo()">Gå</button> <br/>
+        <button id="le" onclick="length()">Längd</button><br/>
+        <p id="l"></p>
+
+     
+           </body> 
+      </html>
