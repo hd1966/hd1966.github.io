@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <title>JavaScript Window objekt</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+  <style>
+    button,p{
+        margin-top: 30px;
+        color: brown;
+        font-size: 28px;
+    }
+  </style>
+    <script>
+        var myWindow;
+     function newWindow() {
+        myWindow = window.open("snowleopard.jpg","SnowLeopard", "width=1050, height=400,top=100,left=100, resizable=yes, scrollbars=yes, location=yes");
+        myWindow.focus();
+	  }
+	 function closeWindow(){
+	 myWindow.close();
+	 }
+
+     function moveParentWindow(){
+        myWindow.moveTo(250, 0); // move window
+        myWindow.focus();
+	 }
+     function resizeParentWindow(){
+        myWindow.resizeBy(250, 0); // resize window
+	 }
+
+     function dimWindow()
+    {
+        document.getElementById("par").innerHTML = "outerHeight: "+ window.outerWidth +"<br/>"+"outerWidth: "+window.outerWidth+ "<br/>"+"innerHeight: " +window.innerHeight+
+        "<br/>"+"innerWidth: " +window.innerWidth+"<br/>"+"Screen width: " + window.screen.width+"<br/>"+ "Screen height: "+ window.screen.height; 
+         
+    }
+ </script>
+</head>
+<body>
+  <p>Tryck på någon knapp:</p>
+  <button type="button" onclick="newWindow()" >Öppna fönster</button>
+  <button onclick="closeWindow()">Stäng fönster</button>
+  <button onclick="moveParentWindow()" >Flytta fönstret</button>
+  <button onclick="resizeParentWindow()" >Ändra fönstrets storlek</button>
+  <button onclick="dimWindow()" >Info om fönster</button><br/>
+  <p id="par"></p>  
+
+  
+
+
+</body>
+</html>
