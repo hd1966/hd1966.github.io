@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+  <title>JavaScript Timers and Intervals : setInterval() funktion</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+#myBox
+{
+  width: 150px; height: 150px;
+  background-color:rgb(248, 250, 12);
+  border-radius:10px;
+  position: absolute;
+  left:10; top:200px;
+  box-shadow: 0px 0px 10px 2px #999;
+}
+button,p{
+            margin-top: 30px;
+            color: brown;
+            font-size: 28px;
+            display:block;
+            padding:10px;
+            width:300px;
+            
+        }
+        button{
+            text-align: center;
+        }
+</style>
+<script>
+var Xpos = 0;
+var myTimer;
+var myInterval;
+function transX() {
+  Xpos+=15;
+  var left = Xpos + "px";
+  document.getElementById("myBox").style.left=left;
+}
+function goInt()
+{
+    myInterval= setInterval(transX,500);
+}
+function goTim()
+{
+    myTimer= setTimeout(transX,500);
+}
+function clInt()
+{
+    clearInterval(myInterval);
+}
+function clTim()
+{
+    clearTimeout(myTimer);
+}
+
+</script>
+
+</head>
+<body>
+        <button id="back" onclick="goInt()">Set interval</button>
+        <button id="forward" onclick="goTim()">Set timeout</button> 
+        <button id="go" onclick="clTim()">Clear timeout</button> 
+        <button id="le" onclick="clInt()">Clear interval</button>
+<div id="myBox"></div>
+</body>
