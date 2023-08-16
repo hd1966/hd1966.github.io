@@ -17,7 +17,7 @@
         myWindow.focus();
 	  }
 	 function closeWindow(){
-	 myWindow.close();
+	    myWindow.close();
 	 }
 
      function moveParentWindow(){
@@ -38,11 +38,11 @@
 </head>
 <body>
   <p>Tryck på någon knapp:</p>
-  <button type="button" onclick="newWindow()" >Öppna fönster</button>
-  <button onclick="closeWindow()">Stäng fönster</button>
-  <button onclick="moveParentWindow()" >Flytta fönstret</button>
-  <button onclick="resizeParentWindow()" >Ändra fönstrets storlek</button>
-  <button onclick="dimWindow()" >Info om fönster</button><br/>
+  <button type="button" onclick="newWindow()" >Öppna popup fönster</button>
+  <button onclick="closeWindow()">Stäng popup fönster</button>
+  <button onclick="moveParentWindow()" >Flytta popup fönstret</button>
+  <button onclick="resizeParentWindow()" >Ändra popup fönstrets storlek</button>
+  <button onclick="dimWindow()" >Info om "parent" fönster</button><br/>
   <p id="par"></p>  
 
   
