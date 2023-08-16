@@ -14,23 +14,24 @@
   </style>
     <script>
         var myWindow;
-     function newWindow() {
+     function newPopupWindow() {
         myWindow = window.open("snowleopard.jpg","SnowLeopard", "width=1050, height=400,top=100,left=100, resizable=yes, scrollbars=yes, location=yes");
         myWindow.focus();
 	  }
-	 function closeWindow(){
+	 function closePopupWindow(){
 	    myWindow.close();
 	 }
 
-     function moveParentWindow(){
+     function movePopupWindow(){
         myWindow.moveTo(250, 0); // move window
         myWindow.focus();
 	 }
-     function resizeParentWindow(){
+     function resizePopupWindow(){
         myWindow.resizeBy(250, 0); // resize window
+        myWindow.focus();
 	 }
 
-     function dimWindow()
+     function dimParentWindow()
     {
         document.getElementById("par").innerHTML = "outerHeight: "+ window.outerWidth +"<br/>"+"outerWidth: "+window.outerWidth+ "<br/>"+"innerHeight: " +window.innerHeight+
         "<br/>"+"innerWidth: " +window.innerWidth+"<br/>"+"Screen width: " + window.screen.width+"<br/>"+ "Screen height: "+ window.screen.height; 
@@ -40,11 +41,11 @@
 </head>
 <body>
   <p>Tryck på någon knapp:</p>
-  <button type="button" onclick="newWindow()" >Öppna popup fönster</button>
-  <button onclick="closeWindow()">Stäng popup fönster</button>
-  <button onclick="moveParentWindow()" >Flytta popup fönstret</button>
-  <button onclick="resizeParentWindow()" >Ändra popup fönstrets storlek</button>
-  <button onclick="dimWindow()" >Info om "parent" fönster</button><br/>
+  <button type="button" onclick="newPopupWindow()" >Öppna popup fönster</button>
+  <button onclick="closePopupWindow()">Stäng popup fönster</button>
+  <button onclick="movePopupWindow()" >Flytta popup fönstret</button>
+  <button onclick="resizePopupWindow()" >Ändra popup fönstrets storlek</button>
+  <button onclick="dimParentWindow()" >Info om "parent" fönster</button><br/>
   <p id="par"></p>  
 
   
