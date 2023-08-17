@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fakultet</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style>
+
+	
+	h1{
+	  background-color: #a1a101;
+	  width: 200px;
+	  margin: 10px;
+	  text-align: center;
+	  line-height: 75px;
+	  font-size: 30px;
+	}
+	</style>
+<script type="text/JavaScript">
+
+function factorial(x) {
+   // om input argument är invalid , kasta en undantag!
+    if (x < 0) throw new Error("x must not be negative");
+	// Annars , beräkna värde och returnera det
+            var f=1;
+	for(; x > 1; f *= x, x--) /* empty */ ;
+	return f;
+   }
+function inmatningFakultet()
+{
+    try {
+	// Begära att användare mata in ett heltal
+	var n = Number(prompt("Please enter a positive integer", ""));
+	// Beräkna fakultet om inmatning är valid
+	var f = factorial(n);
+	// Visa resultat
+	alert(n + "! = " + f);
+    document.write("<h1 style='background-color: #a1a101; text-align: center; line-height: 75px; font-size: 30px;'>Resultat: "+n+"!="+f+"</h1>");
+    }
+	catch (ex) 
+    { // om inmatning är inte valid då denna del exekveras
+	    alert(ex); // säger vad felet är
+    }
+}
+
+	</script>
+</head>
+<body onload="inmatningFakultet()">
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>onload exempel</title>
+    <script>
+        window.onload = function(){ //anonym function
+            var later = new Date(2010, 0, 1, 17, 10, 30);// Först dag , första månad , 2010, 17:10:30
+            // Samma datum,	5:10:30pm, local tid
+            var now = new Date(); // Aktuellt datum och tid
+            var msPerDay = 24 * 60 * 60 * 1000; // Number of milliseconds per day  console.log( (now.getTime() - later.getTime()) / msPerDay);
+            var s = "Haris Drapic"; //initialisera sträng variabel
+            console.log(s.length);//12
+            console.log(s.charAt(0)); // => "H": the first character.  console.log(s.charAt(s.length-1)); // => "c": the last character.  console.log(s.substring(1,4)); // => "ari": the 2nd, 3rd and 4th characters.  console.log(s.slice(1,4)); // => "ari": same thing
+            console.log(s.slice(-3)); // => "pic": last 3 characters  console.log(s.indexOf("a")); // => 1: position of first letter l.  console.log(s.lastIndexOf("a")); // => 9: position of last letter l.
+        }
+        </script>
+    </head>
+    <body>
+</body>
+</html>
+    
