@@ -1,0 +1,94 @@
+DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Video,audio,object</title>
+<style>
+video{
+border: 5px dotted blue; 
+}
+
+div#video{
+float:left;
+border: 5px solid #00aabb;
+width:300px;
+height:300x;
+margin:20px;
+padding:10px; 
+}
+video{
+width:300px;
+height:300x; 
+}
+object{
+width:300px;
+height:300x; 
+}
+
+
+#audio{
+float:left;
+border: 5px solid red; 
+margin:20px;
+padding:10px; 
+}
+#object{
+float:left;
+border: 5px dotted red; 
+width:300px;
+height:300x;
+margin:20px;
+padding:10px; 
+}
+
+#taudio{
+text-align:center;
+box-shadow: 5px 10px blue;
+background-color:#00dd77;
+}
+
+#tpdf{
+text-align:center;
+box-shadow: 5px 10px green;
+background-color:#00ddff;
+}
+
+#tvideo{
+text-align:right;
+box-shadow: 5px 10px red;
+background-color:#dd0077;
+}
+
+#foot{
+clear:left;
+text-align:center;
+font-style:italic;
+font-weight:bold;
+font-size:28px;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div id="video">
+<h1 id="tvideo">Sample video</h1>
+<video controls autoplay src="samplevideo.webm"   >
+    Sorry, your browser doesn't support embedded videos.
+</video>
+</div>
+<div id="audio">
+<h1 id="taudio">Nationell sång </h1>
+<audio src="sweden.mp3" controls />
+</div>
+<div id="object">
+<h1 id="tpdf">PDF file </h1>
+<object type="application/pdf" data="sample.pdf" name="swf"></object>
+</div> 
+<p id="foot">Video audio object </p>
+</body>
+
+
+</html>

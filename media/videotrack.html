@@ -1,0 +1,45 @@
+<DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Video,track,vtt</title>
+    <style>
+    video{
+    width:100%;
+    height:80%;
+    border: 5px dotted green; 
+    }
+    h1{
+    text-align:center;
+    box-shadow: 5px 10px blue;
+    background-color:#00dd77;
+    }
+    footer{
+    text-align:center;
+    font-style:italic;
+    font-weight:bold;
+    font-size:28px;
+    }
+    video::cue{
+    background-color:green;
+    opacity: 0.5;
+    }
+    
+    
+    </style>
+    </head>
+    <body>
+    <h1> Sample video, track, vtt</h1>
+    <video controls  src="samplevideo4.mp4" preload="metadata" poster="poster.jpg"     >
+    
+        <track label="english" default kind="subtitles" srclang="en" src="english-subtitles4.vtt">
+        <track label="svenska" kind="subtitles" srclang="sv" src="svenska-undertitlar4.vtt">
+    
+        Sorry, your browser doesn't support embedded videos.
+    </video>
+    
+    <footer> Video text tracks -  vtt</footer>
+    </body>
+    
+    
+    </html>
