@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+.parentAbsolute{
+width:500px;
+height:250px;
+position:absolute;
+top:100px;
+left:100px;
+padding: 10px; /* liten padding (inre uttryme) */
+border: solid black 3px; /* och solid svart ramlinje */
+border-radius: 10px; /* avrundade hörn */
+background: #0df; /* bakgrundsfärg rödgrön nyans */
+}
+.relative1{
+width:150px;
+height:150px;
+position:relative;
+top:20px;
+right:-10px;
+padding: 10px; /* liten padding (inre uttryme) */
+border: solid black 3px; /* och solid svart ramlinje */
+border-radius: 10px; /* avrundade hörn */
+background: #fd0; /* bakgrundsfärg rödgrön nyans */
+z-index:1;
+}
+.relative2{
+width:150px;
+height:150px;
+position:relative;
+top:-130px;
+right:20px;
+padding: 10px; /* liten padding (inre utrymme) */
+border: solid yellow 3px; /* och solid svart ramlinje */
+border-radius: 10px; /* avrundade hörn */
+background: #0d0; /* bakgrundsfärg rödgrön nyans */
+z-index:2;
+transition-property: opacity;
+transition-duration: 8s;
+transition-delay: 4s;
+}
+.relative3{
+width:150px;
+height:150px;
+position:relative;
+top:-260px;
+right:40px;
+padding: 10px; /* liten padding (inre utrymme) */
+border: solid blue 3px; /* och solid svart ramlinje */
+border-radius: 10px; /* avrundade hörn */
+background: #d00; /* bakgrundsfärg rödgrön nyans */
+z-index:3;
+transition-property: opacity;
+transition-duration: 4s;
+}
+.relative3:hover{
+filter: alpha(opacity=10);
+opacity: 0.1;
+}
+.relative2:hover{
+filter: alpha(opacity=10);
+opacity: 0.1;
+}
+</style>
+</head>
+<body>
+<h1>Positionering med z-index</h1>
+<div class="parentAbsolute">
+<div class="relative1"><p>Flower 1</p><img src="flower1.jpg" />
+</div>
+<div class="relative2"><p>Flower 2</p><img src="flower2.jpg" />
+</div>
+<div class="relative3"><p>Flower 3</p><img src="flower3.jpg" />
+</div>
+</div>
+</body>
+</html>
+

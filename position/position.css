@@ -1,0 +1,42 @@
+.parentRelative{/*relative positionering används*/
+    width:300px;
+    height:200px;
+    position:relative;
+    padding: 10px; /* liten padding (inre utrymme) */
+    border: solid black 3px; /* och solid svart ramlinje */
+    border-radius: 10px; /* avrundade hörn */
+    }
+    .relative{/*relative positionering används med position, top och right*/
+    width:300px;
+    height:200px;
+    position:relative;
+    top:20px;
+    right:-10px;
+    padding: 10px; /* liten padding (inre utrymme) */
+    border: solid black 3px; /* och solid svart ramlinje */
+    border-radius: 10px; /* avrundade hörn */
+    background: #fd0; /* bakgrundsfärg rödgrön nyans */
+    }
+    div.fixed {/*fixed positionering används med position, top och right 
+    för alla div som har class fixed*/
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid #00f;
+    }
+    .absolute{/*absolute positionering används med position, top och right*/
+    position: absolute;
+    top:30px;
+    right:20px;
+    width:250px;
+    height:120px;
+    background: #0df; /* bakgrundsfärg blågrön nyans */
+    }
+    div.sticky {/*sticky positionering används med position och top */
+    position: sticky;
+    top: 10px;
+    padding: 5px;
+    background-color: #0e8a;
+    border: 2px solid #4C0050;
+    }

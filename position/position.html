@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <title>Positionering</title>
+    <link rel="stylesheet" type="text/css" href="position.css">
+</head>
+<body>
+    <h1>Absolute positionering</h1>
+    <div class="parentRelative">
+    <p class="absolute">Box med absolute positionering inne i relativ positionerad box</p>
+    </div>
+    <p class="absolute">Box med absolute positionering utanför någon positionerad box</p>
+    <h1>Relative positionering</h1>
+    <p class="relative">Box med relative positionering </p>
+    <br/>
+    <br/>
+    <h1>Sticky positionering</h1>
+    <div class="sticky">Box med sticky positionering</div>
+    <div style="padding-bottom:2000px"><p>Om du scrollar ner sida denna text försvinner men aldrig texten 
+    <cite>Box med sticky positionering</cite> (ovanför)</p></div>
+    <h1>Fixed positionering</h1>
+    <p>Alltid stanna i en position relativ till vyport(i detta fall top-högra hörnet) även om man scrollar webbsida</p>
+    <div class="fixed">
+    div element har position: fixed;
+    </div>
+</body>
+</html>
