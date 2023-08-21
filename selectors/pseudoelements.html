@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>list css</title>
+    <style>
+      ::marker {
+        color: hotpink;
+      }
+      
+      ul ::marker {
+        font-size: 1.5em;
+      }
+      
+      ol ::marker {
+        font-size: 1.1em;
+      }
+      
+      summary::marker {
+        content: '\002B'' '; /* Plus symbol with space */
+      }
+      
+      details[open] summary::marker {
+        content: '\2212'' '; /* Minus symbol with space */
+      }
+      
+      /* Presentational styles */
+      li + li {
+        margin-top: 0.25em;
+      }
+      
+      ol {
+        padding: 0 0 0 1.1em;
+      }
+      ::selection {
+  background: green;
+  color: white;
+}
+p:nth-of-type(2)::selection {
+  background: darkblue;
+  color: yellow;
+}
+p:first-of-type:first-line {
+  color: goldenrod;
+  font-weight: bold;
+}
+      </style>
+      
+</head>
+<body>
+<h1>The <code>::marker</code> pseudo-element</h1>
+<ul>
+  <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
+  <li>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</li>
+  <li>Curabitur blandit tempus porttitor.</li>
+</ul>
+<ol>
+  <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
+  <li>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</li>
+  <li>Curabitur blandit tempus porttitor.</li>
+</ol>
+<details>
+  <summary>Open for some more content</summary>
+  <p>
+    Praesent commodo cursus magna, vel
+    scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis
+    parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque
+    ornare sem lacinia quam venenatis vestibulum. Cras justo odio, dapibus ac
+    facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula
+    ut id elit.
+  </p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae volutpat sapien,<br>
+    eu suscipit lorem. Suspendisse lacinia nibh vel nibh gravida accumsan vitae eu tellus.<br>
+     Aenean tristique et nisi consequat sagittis. Phasellus consectetur euismod faucibus. <br>
+   Nullam egestas volutpat diam sed accumsan. Integer mollis ipsum vitae ex posuere, eget tincidunt<br>
+    nisi tempus. </p>
+</details>
+</body>
+</html>
