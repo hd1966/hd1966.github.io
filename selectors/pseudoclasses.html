@@ -35,34 +35,41 @@ input:valid {
 input[type=password]:valid {
   border-color: green;
 }
+form{
+  font-size: 24px;
+}
+button{
+  display: block;
+}
+p:nth-child(2)
+{
+  background-color: lightskyblue;
+}
         </style>
 </head>
 <body>
 <form>
+    <p>Skriv in en valid epost för att se att utseendet ändras. Använd :invalid och :valid!</p>
     <label for="email">Email address</label>
-    <input type="email" id="email" required placeholder="A valid email, like name@domain.com" aria-describedby="emailinfo" />
-    <p class="info" id="emailinfo">Add a valid email address to see the state change</p>
-    <button class="button">Click and hold to see the active state</button>
-    <button disabled class="button">Use your tab key to focus this button</button>
+    <input type="email" id="email" required placeholder="A valid email, like name@domain.com" >
+    <button class="button">Klicka och hålla för att se knappens utseende i aktivt tillstånd(:active) </button>
+    <button disabled class="button">Använd tab för att få fokus på denna knapp</button>
     <label>
         <input type="checkbox" />
-        Check me
+        Välj mig och utseendet ändras.
       </label>
-      <label>
-        <input type="checkbox" />
-        Check me too
-      </label>
-      <label for="number">Change the number</label>
+      <label for="number">Byt detta nummer för att det blir valid</label>
   <input type="number" id="number"  min="1" max="10" value="15" />
-  <input name="pin" type="password" pattern="\d{4,4}" required />
+  <label for="number">Byt detta nummer för att det blir valid</label>
+  <input name="pin" type="password" pattern="\d{8,16}" required />
   </form>
  
   <h1>My pizza dough recipe</h1>
   <p>
-    <a href="#recipe" class="button">Skip to the recipe</a>
+    <a href="#here" class="button">Gå till här.</a>
   </p>
   <div>
-  <p>I am the first paragraph.</p>
+  <p>Det är et andra stycket.Använd nth-child!</p>
   <p>Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper.</p>
 
   <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.</p>
@@ -81,8 +88,8 @@ input[type=password]:valid {
     euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Cras
     mattis consectetur purus sit amet fermentum.
   </p>
-  <p>I am the last paragraph.</p></div>
-  <h2 id="recipe">Here is the actual recipe</h2>
+  <p>Den är den näst sista stycket.</p></div>
+  <h2 id="here">Här</h2>
   <p> Det följer den</p>
 </body>
 </html>
