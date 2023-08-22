@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8"> 
+        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
+<script>
+
+function randomColor() {
+    var x = Math.floor(Math.random() * 256);//0-255
+    var y = Math.floor(Math.random() * 256);//0-255
+    var z = Math.floor(Math.random() * 256);//0-255
+    return "rgb(" + x + "," + y + "," + z + ")";
+}    
+$(document).ready(function(){
+    
+    $("#btn1").click(function(){
+        $("#test1").text("Hej på alla!");
+        $("body").css("background",randomColor());
+    });
+    $("#btn2").click(function(){
+        $("#test2").html("<b>Hello world!</b>");
+        $("body").css("background",randomColor());
+    });
+    $("#btn3").click(function(){
+        $("#test3").val("Arne Anka");
+        $("body").css("background",randomColor());
+    });
+});
+</script>
+</head>
+<body>
+
+<p id="test1">Första paragraf</p>
+<p id="test2">Andra paragraf</p>
+
+<p>Text: <input type="text" id="test3" ></p>
+
+<button id="btn1">Set Text</button>
+<button id="btn2">Set HTML</button>
+<button id="btn3">Set Value</button>
+
+</body>
+</html>
