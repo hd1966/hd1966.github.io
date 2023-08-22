@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>list css</title>
+    <style>
+        :checked {
+  box-shadow: 0px 0px 5px 2px green;
+}
+button:disabled {
+  background: grey;
+  border-color: grey;
+  cursor: not-allowed;
+}
+
+button:enabled {
+  border: 5px solid gold;
+}
+/* This highlights the <h2> for the recipe and every element that follows it */
+    #recipe:target,
+#recipe:target ~ * {
+  background: lightgoldenrodyellow;
+}
+.button:focus {
+  outline: 2px dashed blue;
+  outline-offset: 2px;
+  background-color: black;
+}
+input:invalid {
+  border-color: red;
+}
+input:valid {
+  border-color: green;
+}
+input[type=password]:valid {
+  border-color: green;
+}
+        </style>
+</head>
+<body>
+<form>
+    <label for="email">Email address</label>
+    <input type="email" id="email" required placeholder="A valid email, like name@domain.com" aria-describedby="emailinfo" />
+    <p class="info" id="emailinfo">Add a valid email address to see the state change</p>
+    <button class="button">Click and hold to see the active state</button>
+    <button disabled class="button">Use your tab key to focus this button</button>
+    <label>
+        <input type="checkbox" />
+        Check me
+      </label>
+      <label>
+        <input type="checkbox" />
+        Check me too
+      </label>
+      <label for="number">Change the number</label>
+  <input type="number" id="number"  min="1" max="10" value="15" />
+  <input name="pin" type="password" pattern="\d{4,4}" required />
+  </form>
+ 
+  <h1>My pizza dough recipe</h1>
+  <p>
+    <a href="#recipe" class="button">Skip to the recipe</a>
+  </p>
+  <div>
+  <p>I am the first paragraph.</p>
+  <p>Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper.</p>
+
+  <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.</p>
+  
+  <p>
+    Here are several paragraphs of back-story: Fusce dapibus, tellus ac cursus
+    commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
+    risus. Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis
+    euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Cras
+    mattis consectetur purus sit amet fermentum.
+  </p>
+  <p>
+    Here are several paragraphs of back-story: Fusce dapibus, tellus ac cursus
+    commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
+    risus. Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis
+    euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Cras
+    mattis consectetur purus sit amet fermentum.
+  </p>
+  <p>I am the last paragraph.</p></div>
+  <h2 id="recipe">Here is the actual recipe</h2>
+  <p> Det följer den</p>
+</body>
+</html>
+ 
