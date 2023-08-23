@@ -35,7 +35,7 @@ input:valid {
 input[type=password]:valid {
   border-color: green;
 }
-form{
+form,p,input{
   font-size: 24px;
 }
 button{
@@ -62,7 +62,7 @@ label{
 }
 p
 {
-  width:400px;
+  width:600px;
 }
 div > p{
   color:cornflowerblue;
@@ -72,18 +72,20 @@ div > p{
 <body>
 <form>
     <p>Skriv in en valid epost för att se att utseendet ändras.</p>
-    <label for="email">Email address</label>
-    <input type="email" id="email" required placeholder="A valid email, like name@domain.com" >
-    <button class="button">Klicka och håll för att se knappens utseende i aktivt tillstånd </button>
-    <button disabled class="button">Använd tab för att få fokus på denna knapp</button>
+    <p><label for="email">Email address</label>
+    <input type="email" id="email" required placeholder="A valid email, like name@domain.com" ></p>
+    <p><button class="button">Klicka och håll för att se knappens utseende i aktivt tillstånd </button>
+    <button disabled class="button">Använd tab för att få fokus på denna knapp</button></p>
     <label>
         <input type="checkbox" />
         Kryssa och utseendet ändras.
       </label>
-      <label for="number">Byt detta nummer för att det blir valid.</label>
-  <input type="number" id="number"  min="1" max="10" value="15" />
-  <label for="number">Byt detta lösenord för att det blir valid.</label>
-  <input name="pin" type="password" pattern="\d{8,16}" required />
+      <p>
+        <label for="number">Byt detta nummer för att det blir valid.</label>
+        <input type="number" id="number"  min="1" max="10" value="15" ></p>
+        <label for="number">Byt detta lösenord för att det blir valid.</label>
+        <input name="pin" type="password" pattern="\d{8,16}" required />
+      </p>
   </form>
  
   <h1>Olika lorem</h1>
