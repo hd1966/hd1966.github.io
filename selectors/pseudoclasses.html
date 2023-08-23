@@ -39,13 +39,14 @@ form,p,input{
   font-size: 24px;
 }
 button{
-  display: block;
+  display:inline-block;
+  margin-top: 40px;
 }
-p:nth-of-type(3)
+p:nth-of-type(2)
 {
   background-color: lightskyblue;
 }
-p:nth-of-type(6)
+p:nth-of-type(5)
 {
   background-color: lightcoral;
   color:green
@@ -53,7 +54,7 @@ p:nth-of-type(6)
 p:last-of-type
 {
   background-color: lightcoral;
-  color:green
+ 
 }
 
 label{
@@ -72,7 +73,7 @@ div > p{
 <body>
 <form>
     <p>Skriv in en valid epost för att se att utseendet ändras.</p>
-    <p><label for="email">Email address</label>
+    <p><label for="email">Email address:</label>
     <input type="email" id="email" required placeholder="A valid email, like name@domain.com" ></p>
     <p><button class="button">Klicka och håll för att se knappens utseende i aktivt tillstånd </button>
     <button disabled class="button">Använd tab för att få fokus på denna knapp</button></p>
