@@ -1,11 +1,11 @@
-h1,div{
+h1{
     margin: 20px;
 }
 h1{
     color:red;
 }
 
-div
+p
 {
    background-color:#304408;
    font-family:'Courier New',Courier, monospace;
@@ -18,14 +18,14 @@ div
    padding:10px;
 }
 
-div:hover
+p:hover
 {
     border: 3px solid lightblue;
     color: blue;
    
     
 }
-div:focus
+polygon:focus
 {
   
     background-color:darkblue;
@@ -39,19 +39,19 @@ span{
 }
 
 
-div:focus span{
+p:focus span{
      display:none;
 }
 
-div:focus p:after{
+p:focus p:after{
     content: 'Focus';
 }
 
-div:hover span{
+p:hover span{
     display:none;
 }
 
-div:hover p:after{
+p:hover p:after{
    content: 'Hover';
 }
 
