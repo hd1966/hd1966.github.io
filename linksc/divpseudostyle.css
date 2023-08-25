@@ -33,13 +33,13 @@ div:focus
    
 }
 
-div p span{
-    position: relative;
+span{
+    /*position: relative;*/
     content: 'Default';
 }
 
 
-div:focus p span{
+div:focus span{
      display:none;
 }
 
@@ -47,7 +47,7 @@ div:focus p:after{
     content: 'Focus';
 }
 
-div:hover p span{
+div:hover span{
     display:none;
 }
 
