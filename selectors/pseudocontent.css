@@ -43,7 +43,7 @@ p:focus span{
      display:none;
 }
 
-p:focus p:after{
+p:focus span:after{
     content: 'Focus';
 }
 
@@ -51,7 +51,7 @@ p:hover span{
     display:none;
 }
 
-p:hover p:after{
+p:hover span:after{
    content: 'Hover';
 }
 
