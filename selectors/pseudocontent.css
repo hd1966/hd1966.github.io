@@ -37,7 +37,7 @@ div:focus p {
      display:none;
 }
 
-div:focus p::after{
+div:focus div::after{
     content: 'Focus';
 }
 
@@ -45,7 +45,7 @@ div:hover p {
     display:none;
 }
 
-div:hover p::after{
+div:hover div::after{
    content: 'Hover';
 }
 
