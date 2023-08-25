@@ -39,19 +39,19 @@ span{
 }
 
 
-p:focus span{
+p:focus p span{
      display:none;
 }
 
-p:focus span:after{
+p:focus p:after{
     content: 'Focus';
 }
 
-p:hover span{
+p:hover p span{
     display:none;
 }
 
-p:hover span:after{
+p:hover p:after{
    content: 'Hover';
 }
 
