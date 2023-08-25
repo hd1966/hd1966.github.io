@@ -3,70 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>pseudoclasses</title>
-    <style>
-        :checked {
-  box-shadow: 0px 0px 5px 2px green;
-}
-button:disabled {
-  background: lightgray;
-  border-color: rgb(61, 44, 160);
-  cursor: not-allowed;
-}
-
-button:enabled {
-  border: 5px solid gold;
-}
-
- #recipe:target
- {
-  background: lightgoldenrodyellow;
-}
-.button:focus {
-  outline: 2px dashed blue;
-  outline-offset: 2px;
-  background-color: black;
-}
-input:invalid{
-  border-color: red;
-  color:red;
-}
-input:valid {
-  border-color: green;
-  color:green;
-}
-input[type=password]:valid {
-  border-color: green;
-  color:green;
-}
-form,p,input,button{
-  font-size: 24px;
-}
-button{
-  display:inline-block;
-  margin-top: 40px;
-}
-p:nth-of-type(6)
-{
-  background-color: lightskyblue;
-}
-p:nth-of-type(8)
-{
-  background-color: lightcoral;
-  color:green
-}
-
-label{
-  margin-right: 40px;
-  display: inline-block;
-}
-p
-{
-  width:800px;
-}
-div > p{
-  color:cornflowerblue;
-}
-        </style>
+    <link rel="stylesheet" type="text/css" href="pseudoclassesstyle.css">
 </head>
 <body>
 <form>
@@ -91,7 +28,7 @@ div > p{
  
   <h1>Olika lorem</h1>
   <p>
-    <a href="#here" class="button">Gå till här.</a>
+    <a id="a" href="#here" class="button">Gå till här.</a>
   </p>
   <p>Det är det andra syskon.</p>
   <p>Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper.</p>

@@ -1,0 +1,62 @@
+:checked {
+    box-shadow: 0px 0px 5px 2px green;
+  }
+  button:disabled {
+    background: lightgray;
+    border-color: rgb(61, 44, 160);
+    cursor: not-allowed;
+  }
+  
+  button:enabled {
+    border: 5px solid gold;
+  }
+  
+   #a:target
+   {
+    background: lightgoldenrodyellow;
+  }
+  .button:focus {
+    outline: 2px dashed blue;
+    outline-offset: 2px;
+    background-color: black;
+  }
+  input:invalid{
+    border-color: red;
+    color:red;
+  }
+  input:valid {
+    border-color: green;
+    color:green;
+  }
+  input[type=password]:valid {
+    border-color: green;
+    color:green;
+  }
+  form,p,input,button{
+    font-size: 24px;
+  }
+  button{
+    display:inline-block;
+    margin-top: 40px;
+  }
+  p:nth-of-type(6)
+  {
+    background-color: lightskyblue;
+  }
+  p:nth-of-type(8)
+  {
+    background-color: lightcoral;
+    color:green
+  }
+  
+  label{
+    margin-right: 40px;
+    display: inline-block;
+  }
+  p
+  {
+    width:800px;
+  }
+  div > p{
+    color:cornflowerblue;
+  }
