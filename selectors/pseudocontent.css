@@ -27,25 +27,25 @@ div:hover,div:focus
 }
 
 
-div p span{
+div p {
     position: relative;
     content: 'Default';
 }
 
 
-div:focus p span{
+div:focus p {
      display:none;
 }
 
-div:focus p:after{
+div:focus p::after{
     content: 'Focus';
 }
 
-div:hover p span{
+div:hover p {
     display:none;
 }
 
-div:hover p:after{
+div:hover p::after{
    content: 'Hover';
 }
 
