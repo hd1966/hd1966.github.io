@@ -1,0 +1,64 @@
+h1,div{
+    margin: 20px;
+}
+h1{
+    color:red;
+}
+
+div
+{
+   background-color:#304408;
+   font-family:'Courier New',Courier, monospace;
+   font-size:2em;
+   border: 5px solid white;
+   border-radius: 25px;
+   text-align: center;
+   color: white;
+   width:150px;
+   padding:10px;
+}
+
+div:hover
+{
+    border: 3px solid lightblue;
+    color: blue;
+   
+    
+}
+div:focus
+{
+  
+    background-color:darkblue;
+   
+   
+}
+
+span{
+    /*position: relative;*/
+    content: 'Default';
+}
+
+
+div:focus span{
+     display:none;
+}
+
+div:focus p:after{
+    content: 'Focus';
+}
+
+div:hover span{
+    display:none;
+}
+
+div:hover p:after{
+   content: 'Hover';
+}
+
+
+
+
+body{
+   background-color:  #304408;
+  
+}
