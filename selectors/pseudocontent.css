@@ -25,16 +25,10 @@ p:hover
    
     
 }
-polygon:focus
-{
-  
-    background-color:darkblue;
-   
-   
-}
+
 
 span{
-    /*position: relative;*/
+    position: relative;
     content: 'Default';
 }
 
