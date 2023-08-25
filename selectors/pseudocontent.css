@@ -45,7 +45,7 @@ div:hover p span{
     display:none;
 }
 
-div:hover div::after{
+div:hover p::after{
    content: 'Hover';
 }
 
