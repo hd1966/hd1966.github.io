@@ -18,7 +18,7 @@ p
    padding:10px;
 }
 
-div:hover
+div:hover,div:focus
 {
     border: 3px solid lightblue;
     color: blue;
