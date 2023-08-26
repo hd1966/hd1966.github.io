@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!-- <script src="ptitle.js"></script> -->
+<script type="text/JavaScript">
+function getAllParagraphTitle(){
+	var paras = document.getElementsByTagName("p");
+            //alla p (paragrafer) lagras  i arrayen paras
+	for (var i=0; i< paras.length; i++) 
+            {//gås genom array paras 
+	             var title_text = paras[i].getAttribute("title");//hämta titel
+	            if (title_text != null) 
+		{//om titel finns skriv titeln i alertrutan
+		                alert(title_text);
+	  	}
+	}
+}
+	</script>
+	<style>
+	div{
+		margin:auto;
+		width:500px;
+	}</style>
+</head>
+<body>
+<div >
+<p title="first">Första paragraf med title först</p>
+<br/>
+<p title="second">Andra paragraf med title second</p>
+<br/>
+<p>Tredje paragraf utan title</p>
+<br/>
+
+<button onclick="getAllParagraphTitle()">Alla paragrafer med titlar</button>
+</div>
+</body>
+</html>
