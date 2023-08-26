@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Alla attribut</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+//at - attributets namn
+function returnAttributes(at){
+    var arr=[];
+    var temp;
+    var elem=document.getElementsByTagName('*');
+    for(var i=0;temp=elem[i];i++){
+        if(temp[at]  && temp[at]!=-1)
+           if(arr.indexOf(temp[at])==-1)
+                   arr.push(temp[at]);
+    }
+    return arr;
+}
+function allAttributes()
+{
+    var allIds=returnAttributes('id');
+    var allClasses=returnAttributes('className');
+    var allTabs=returnAttributes('tabIndex');
+    alert(allIds);
+    alert(allClasses);
+    alert(allTabs);
+}
+</script>
+</head>
+<body onload="allAttributes()">
+<div id="id_1"></div>
+<div class="myclass_1" tabindex="1"></div>
+<div></div>
+<div id="id_2"></div>
+<div class="myclass_2"></div>
+<div id="id_3"></div>
+<div class="myclass_2" tabindex="2"></div>
+</body>
+</html>
