@@ -1,0 +1,191 @@
+:root {
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+ }
+
+
+/* Settings for whole page */
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+ }
+
+body {
+    /*background-color: #ccc;*/
+    margin: 30px 60px;
+    line-height: 1.4;
+    background: linear-gradient(45deg,#f4f8c1, #8cda81);
+}
+
+/* Top navigation */
+.main_nav{
+    display: flex;
+    margin-bottom: 1.5rem;
+    justify-content: space-between;
+}
+
+.navholder-left{
+    width: 20%;
+}
+
+.navholder-right{
+    width: 60%;
+    display: flex;
+}
+
+.navholder-left a, .navholder-right a{
+    flex: 1;
+    background: #ddd;
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    margin: 0.5rem 1rem;
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+
+/* Main selling points */
+.middle_container{
+    display: flex;
+    background-color: #ddd;
+    margin: 1rem;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+.imgholder{
+    flex: 1;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+.side_container{
+    flex: 1;
+    margin: 0.5rem 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+
+.side_container h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.btn {
+    background: #333;
+    color: #fff;
+    padding: 0.6rem 1.3rem;
+    text-decoration: none;
+    border: 0;
+    border-radius: 25px;
+}
+
+.btn:hover{
+    background: #686868;
+    border-radius: initial;
+}
+
+
+/* Available company services */
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    flex: 1;
+    min-width: 150px;
+    background-color: #ddd;
+    text-align: center;
+    padding: 1.5rem;
+    margin: 1rem;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+.box p{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* End of page offers (sign up) */
+.center-container{
+    display: flex;
+    justify-content: center;
+}
+
+.center-box {
+    background: #ddd;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    padding: 1.5rem;
+  }
+
+.center-box .price {
+    font-size: 2.0rem;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+}
+
+.center-box h3 {
+    margin-top: 0rem;
+}
+
+
+
+/* Media querys 800-600-500*/
+@media (max-width: 800px){
+    .main_nav{
+        flex-direction: column;
+    }
+
+    .navholder-left{
+        width: initial;
+    }
+
+    .navholder-right{
+        width: initial;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px){
+
+    body{
+        margin: 20px;
+    }
+
+    .showcase h1 {
+        font-size: 2rem;
+    }
+
+    .center-container{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px){
+
+    .imgholder{
+        display: none;
+    }
+
+}
+
+
+
