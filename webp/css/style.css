@@ -184,6 +184,18 @@ img{
     .imgholder{
         display: none;
     }
+    .main_nav{
+        order: 1;
+    }
+    .middle_container{
+        order: 2;
+    }
+    .center-container{
+        order: 3;
+    }
+    .boxes{
+        order: 4;
+    }
 
 }
 
