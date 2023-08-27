@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+
+<meta charset="utf-8" />
+<style>
+	p{border:red dashed 5px;}
+    .container-fluid
+    {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<script>
+
+
+/* // När webbsidan är uppladdad
+
+window.onload = function() 
+{
+    // Hitta texten att trycka på
+
+     var text = document.getElementById("reveal").querySelectorAll("h1")[0]; 
+
+
+     // När rubrik(h1) trycks, då synlighet ändras (visas dolda texten)
+
+                text.onclick = function() 
+                {
+  
+			//text "default" dold
+ 
+     			var toggleText = document.getElementById("reveal").querySelectorAll("p")[0];            
+			if (toggleText.style.display == "none") 
+				toggleText.style.display = "block";
+            
+			else if (toggleText.style.display == "block")
+			 	toggleText.style.display = "none";
+        
+		}
+    
+    
+}; */
+
+
+function toogleVisibility(){
+	var p = document.getElementById("dold");
+	/* if (p.getAttribute("style")=="display:none") 
+				p.setAttribute("style","display:block");
+ 	else if (p.getAttribute("style")=="display:block")
+				 p.setAttribute("style","display:none");*/
+	if (p.style.display=="none")  
+				p.style.display="block";
+		else if (p.style.display=="block")  
+				p.style.display="none";
+}
+
+</script>
+
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+  			<div id="reveal">
+
+			<h1 onclick="toogleVisibility()">Tryck här för att visa/dölja dold/synlig text</h1>
+			<p id="dold" style="display:none">Denna paragraf är dold by default. Vid tryckningen på texten ovanför synligheten ändras.</p>
+		 </div>
+	</div>
+	
+</div>
+</body>
+
+</html>
