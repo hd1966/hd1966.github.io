@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+
+<meta charset="utf-8" />
+<script>
+// Funktionen next(elem) letar upp (och returnerar) syskon element-noden efter det element som man skickar in som argument
+function next(elem) {
+    do {
+        elem = elem.nextSibling; // Sparar kommande nod i variabeln elem
+    } while (elem && elem.nodeType != 1); // Om noden är en element-nod returneras noden. Annars så fortsätter loopen till vi hittar en element-nod eller att det inte finns någon mer nod
+    return elem; // Returnerar en ev. element-nod            
+}
+
+// Funktionen prev(elem) letar upp (och returnerar) syskon element-noden före det element som man skickar in som argument
+function prev(elem) {
+    do {
+        elem = elem.previousSibling; // Sparar föregående nod i variabeln elem
+    } while (elem && elem.nodeType != 1); // Om noden är en element-nod returneras noden. Annars så fortsätter loopen till vi hittar en element-nod eller att det inte finns någon mer nod
+    return elem; // Returnerar en ev. element-nod        
+}
+
+// Returnerar textens innehåll (utan taggar), dessutom ska besöka alla barn elements.
+// This method works like the textContent property
+function textContent(e) {
+    var child, type, s = "";  // s håller textens innehåll
+    for(child = e.firstChild; child != null; child = child.nextSibling) {
+        type = child.nodeType;
+        if (type === 3 || type === 4)  // Text och CDATASection noder
+            s += child.nodeValue;
+        else if (type === 1)           // Recursiv anrop för Element noder
+            s += textContent(child);
+    }
+    return s;
+}
+
+function textAll(e){
+    document.getElementById("res").innerHTML=textContent(e);
+}
+
+</script>
+<body>
+    <details onclick="textAll(next(this))">
+        <summary>Copyright 2018.</summary>
+        <p> - Haris Data. All Rights Reserved.</p>
+        <p>All content and graphics Haris Data.</p>
+      </details>
+    <blockquote cite="https://litteraturbanken.se/forfattare/MartinsonH/titlar" onclick="textAll(this)">
+        <p>Sexton år gammal tog han hyra som jungman på motorseglaren Willy som gick på <br/>fraktfart i Nord– och Östersjön. 
+        De följande sju åren arbetade Martinson som sjöman och tillfällighetsarbetare, och gick tidvis på luffen. 
+        Arbetet som sjöman avsatte spår<br/> i debutboken Spökskepp (1929), havet, sjöfåglarna, koleldningen blir här på 
+        samma gång påtagliga erfarenheter och lödiga bilder för liv, kraft och <strike>längtan</strike>.<br/> 
+        Även i diktsamlingen <i>Nomad</i> (1931) utvinns förtätad lyrik ur sjömanslivet. Med detaljskärpa och djärvhet i 
+        skildringen berättar Martinson om <br/>den särskilda rymd och tid som är havets. 
+        Det självupplevda ligger även till grund för de båda reseböckerna <b>Resor utan mål</b> (1932) och <em>Kap farväl!</em> (1933).</p>
+        </blockquote>
+        <h3 id="verk" onclick="textAll(prev(this))">Kort bibliografi</h3>
+<div id="res"></div>
+</body>
+
+</html>
+
+
