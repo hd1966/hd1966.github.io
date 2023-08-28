@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+.droptarget {
+    float: left; 
+    width: 100px; 
+    height: 35px;
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+.droptarget2{
+    float: left; 
+    width: 100px; 
+    height: 35px;
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+</style>
+</head>
+<body>
+
+<div><p>Drag the p element back and forth between the two rectangles:</p></div>
+
+<div  ondrop="drop(event)" class="droptarget2" ondragover="allowDrop(event)" ondragenter="dragenter(event)" ondragleave="dragleave(event)">
+  <p id="par" ondragstart="dragStart(event)" draggable="true" >Drag me!</p>
+</div>
+
+<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragenter(event)" ondragleave="dragleave(event)"></div>
+
+
+
+
+<script>
+    var i=0;
+
+function dragStart(event) { 
+    console.log ("dragstart");
+    //event.preventDefault(); 
+    // Change the source element's background color to signify drag has started
+   
+    event.dataTransfer.setData("text/plain", event.target.id);
+}
+
+/* function dragging(event) {
+    console.log("dragging");
+    event.preventDefault(); 
+    /*  document.getElementById("demo").innerHTML = "The p element is being dragged";
+     event.currentTarget.style.backgroundColor = "rgba(0,0,255,0.1)"; */
+//} 
+
+function allowDrop(event) {
+    if(i==0)  
+    {
+        console.log("dragover");
+        i++;
+    }
+    event.preventDefault(); 
+  
+}
+
+function drop(event) {
+    console.log("drop");
+    event.preventDefault();//tillåta att elementet släpps  
+    event.target.appendChild(document.getElementById(event.dataTransfer.getData("text/plain")));
+   /*  var data = event.dataTransfer.getData("Text");
+  
+    document.getElementById("demo").innerHTML = "The p element was dropped"; */
+    // Clear the drag data cache (for all formats/types)
+    event.dataTransfer.clearData();
+}
+
+
+
+
+/* function dragexit(event)
+{
+    console.log("dragexit");
+    //ev.preventDefault();
+} */
+
+function dragleave(event)
+{
+    
+    console.log("dragleave");
+    //ev.preventDefault();
+}
+
+function dragenter(event)
+{
+    i=0;
+    console.log("dragenter");
+    //event.preventDefault();
+}
+
+</script>
+
+</body>
+</html>
