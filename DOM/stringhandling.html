@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Stringhantering</title> 
+   <script type="text/javascript" >
+    function manipFunction(){
+      var s = document.getElementById("string").value;
+      if(document.getElementById("string_man").value=="reverse")
+      {
+          document.getElementById("res").innerHTML=reverseString(s);
+      }
+      if(document.getElementById("string_man").value=="charAt")
+      {
+          document.getElementById("res").innerHTML=s.charAt(document.getElementById("sel1").value);
+      }
+      if(document.getElementById("string_man").value=="uppercase")
+      {
+          document.getElementById("res").innerHTML=s.toUpperCase();
+      }
+      if(document.getElementById("string_man").value=="lowercase")
+      {
+          document.getElementById("res").innerHTML=s.toLowerCase();
+      }
+      if(document.getElementById("string_man").value=="slice")
+      {
+          document.getElementById("res").innerHTML=s.slice(document.getElementById("sel1").value,document.getElementById("sel2").value);
+      }
+    } 
+
+    function reverseString(str) {
+             return str.split("").reverse().join("");
+    }  
+
+
+function addOptions(strLength, identifier)
+{
+    //fyller select ruta med nya optioner
+    for(var i=0;i<strLength;i++){
+        document.getElementById(identifier).options[document.getElementById(identifier).options.length] = 
+             new Option(i.toString(), i.toString(),false,false);
+                        //text, value attribut, sefault selected, selected
+    }
+}
+
+function removeAllOptions(identifier){
+        document.getElementById(identifier).options.length = 0;// rensar
+   
+}
+
+function addRemoveOptions(){
+    removeAllOptions("sel1");// sel1 - id i select tag 1
+    removeAllOptions("sel2");// sel1 - id i select tag 1
+    addOptions(document.getElementById("string").value.length,"sel1");//string id i enter ruta
+    addOptions(document.getElementById("string").value.length,"sel2");
+}
+
+      </script> 
+<style>
+    label,select,.form-inline{
+        display:inline-block;
+    }
+    select#sel1{
+        background-color: aquamarine;
+    }
+    select#sel1{
+        margin-left: 140px;
+        margin-right: 50px;
+        
+    }
+    select#string_man{
+        margin-left: 50px;
+        width:100px;
+    }
+    input#string{
+        margin-left: 50px;
+        margin-right: 50px;
+        
+    } 
+    select#sel2{
+        margin-left: 70px;
+    }
+    .row{
+        display:flex;
+        justify-content: center;
+    }
+</style>
+   
+  
+   
+</head>
+<body>
+   
+
+<br/>
+<br/>
+
+<div class="container"> 
+        <div class="row ">
+                         
+                        <form>
+                                <div class="form-inline ">
+                                            <label   for="string">Enter String: </label><input   class="form-control d-inline-block" type="text" id="string"  name="str" onchange="addRemoveOptions()">
+                                            <label   for="string_man">String functions:</label>
+                                            <select   id ="string_man" name="cars" onchange="manipFunction()">
+                                                <option value="def">Default</option>
+                                                <option value="reverse">Reverse</option>
+                                                <option value="charAt">CharAt</option>
+                                                <option value="uppercase">Uppercase</option>
+                                                <option value="lowercase">Lowercase</option>
+                                                <option value="slice">Slice</option>
+                                            </select>
+                                </div>
+                        </form>
+                
+         </div>
+         <br/>
+        <div class="row">
+           
+                  <form >
+                    <div class="form-inline ">
+                        <label  for="sel1">charAt /slice from : </label>
+                        <select  id="sel1">
+                       </select>
+                        <label   for="sel2">slice to parameter: </label>
+                        <select  id="sel2">
+                        </select>
+                    </div>
+                    
+                </form>
+            
+        </div>
+   </div>
+   <br/>
+   <br/>
+   <div class="row" id="res"></div>
+
+
+</body>
+</html>
