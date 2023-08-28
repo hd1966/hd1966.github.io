@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<script>
+
+
+// När webbsidan är uppladdad
+
+window.onload = function() 
+{
+ 
+var htmlEl=document.getElementsByTagName("html");
+var metaEl=document.createElement("meta");
+metaEl.charset="utf-8";
+htmlEl[0].appendChild(metaEl);
+var bodyEl=document.createElement("body");
+bodyEl.style.background="#f3f3f3 repeat-y";
+var listEl = document.createElement("ul");
+listEl.id ="myList";
+var node = document.createElement("LI");                 //  en <li> nod
+var textnode = document.createTextNode("Mjölk");         // skapa textnod
+node.appendChild(textnode);                              // Lägg till text till <li>
+listEl.appendChild(node);                                // Lägg <li> till <ul> 
+var node = document.createElement("LI");                
+var textnode = document.createTextNode("Kaffe");        
+node.appendChild(textnode);                             
+listEl.appendChild(node);                                
+var node = document.createElement("LI");                 
+var textnode = document.createTextNode("Vatten");        
+node.appendChild(textnode);                              
+listEl.appendChild(node);                                
+listEl.style="list-style-type:square";
+bodyEl.appendChild(listEl);
+htmlEl[0].appendChild(bodyEl);
+}
+</script>
+<html>
