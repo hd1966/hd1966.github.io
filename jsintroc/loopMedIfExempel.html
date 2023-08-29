@@ -6,8 +6,12 @@
     <style>
     b{
         color:rgb(255, 0, 0);
-    }</style>
-    <SCRIPT type="text/javascript">
+    }
+    label,input[type=number]{
+        display:inline-block;
+    }
+    </style>
+    <SCRIPT >
     function  loops()
     {
         var nr=document.getElementById("nr").value;
@@ -35,8 +39,8 @@
     </head>
     <body>
           
-                        <label class="d-inline-block" >Enter number (number>0):</label>
-    <input  class="d-inline-block"  type="number" id="nr" onchange="loops()" />
+                        <label>Enter number (number>0):</label>
+    <input   type="number" id="nr" onchange="loops()" />
                         <br/><br/>
                                     <b><div id="resFor"></div>
                                     <div id="resWhile"></div></b>
