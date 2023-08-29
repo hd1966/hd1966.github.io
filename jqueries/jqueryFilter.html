@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery filter</title>
+<style type="text/css">
+    .highlight{
+        background: yellow;
+    } 
+    .clear{
+        background: white;
+    }               
+</style>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#f").click(function(){
+        $("ul li").removeClass("highlight");
+        $("ul li").first().addClass("highlight");
+    });
+    $("#l").click(function(){
+        $("ul li").removeClass("highlight");
+        $("ul li").last().addClass("highlight");
+    });
+    $("#e").click(function(){
+        $("ul li").removeClass("highlight");
+        $("ul li").filter(":odd").addClass("highlight");
+    });
+    $("#o").click(function(){
+        $("ul li").removeClass("highlight");
+        $("ul li").not(":odd").addClass("highlight");
+    });
+    $("#s").click(function(){
+        $("ul li").removeClass("highlight");
+        $("ul li").eq(-2).addClass("highlight");
+    });
+});
+</script>
+</head>
+<body>
+    <button id="f">First</button>
+    <button id="l">Last</button>
+    <button id="e">Even</button>
+    <button id="o">Odd</button>
+    <button id="s">Sixth</button>
+    <ul>
+        <li>First list item</li>
+        <li>Second list item</li>
+        <li>Third list item</li>
+        <li>Last list item</li>
+        <li>Five list item</li>
+        <li>Sixth list item</li>
+        <li>Seven list item</li>
+    </ul>
+</body>
+</html>

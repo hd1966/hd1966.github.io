@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Example of jQuery Effect Method with Callback Function</title>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<style>
+    p{
+        background:yellow;
+        font-size: 24px;
+        padding:20px;
+    }
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").slideToggle("slow", function(){
+            $("#res").html("<h1>Callback function</h1>");
+            //alert("The slide toggle effect has completed.");
+        });
+    });   
+});
+</script>
+</head>
+<body>
+    <p>This is paragraph.</p>
+    <button type="button">Click me</button>
+    <div id="res"></div>
+</body>
+</html>                            

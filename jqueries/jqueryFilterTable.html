@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase().charAt(0);
+    if(value!="")
+    {
+      $("#myTable tr").filter(function() {
+         $(this).toggle($(this).text().toLowerCase().charAt(0) == value);
+      });
+    }
+    else{
+      $("#myTable tr").filter(function() {
+         $(this).toggle(true);
+      });
+    }
+  });
+});
+
+
+
+</script>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Filtrerad tabell </h2>
+<p>Mata in någonting för att visa bara rader med namn som påbörjar  med denna bokstav.</p>  
+<input id="myInput" type="text" placeholder="Sök..">
+<br><br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Namn</th>
+      <th>Efternamn</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody id="myTable">
+    <tr><td>Haris</td><td>Drapic</td><td>haris.drapic@lund.se</td></tr>
+    <tr><td>Donald</td><td>Duck</td><td>donald.duck@mail.com</td></tr>
+    <tr><td>Arne</td><td>Anka</td><td>arne.anka@greatstuff.com</td></tr>
+    <tr><td>Archibald</td><td>R</td><td>a_r@test.com</td>
+    </tr>
+  </tbody>
+</table>
+  
+<p>Det ska sökas bara i tbody, inte i thead.</p>
+
+</body>
+</html>
