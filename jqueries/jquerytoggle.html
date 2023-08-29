@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<style>
+    p{
+        background: #ffffff;
+        width: 200px;
+        height: 100px;
+        margin: 30px;
+    }
+    .highlight{
+
+background: yellow;
+
+}        
+</style>
+<script>
+$(function(){
+    $("#btn2").click(function(){
+        $("div>p").toggle();
+    });
+
+    $("p").mouseover(function(){
+     $("p").css("background","#ff0000");
+    });
+
+     $("p").mouseout(function(){
+     $("p").css("background","#ffffff");
+    });
+
+    $("#btn1").click(function(){
+        $("#p1").append(" <b>Appended text</b>.");
+    });
+     var t=true;
+     var i = 0;
+    $('input[type="text"]').keypress(function(){
+        $("h2").text(i += 1);
+        $("#fadeout").fadeToggle(3000);
+    });
+
+    $("#btn5").click(function(){
+        if(t)
+        {
+        $("button").siblings("h3,h1").addClass("highlight");
+        t=false;
+        }
+        else
+        {
+            $("button").siblings("h3,h1").removeClass("highlight");
+            t=true;
+        }
+     });
+
+});
+</script>
+</head>
+<body>
+<input type="text" />
+<button id="btn2">Toggle knapp</button>
+<button id="btn1">Append text</button>
+<button id="btn5">Highlight sibling</button>
+<div>
+<p id="p1">Paragraf 1</p>
+<p >Paragraf 2</p>
+<div>Antal tryckningar: <h2>0</h2></div><br/>
+<b id="fadeout" style="width:200px;height:100px;" >Fade toggle effect</b>
+</div>
+<h3 id="p5" style="width:200px;height:60px;">Header 3</h3>
+<h1 id="p6" style="width:200px;height:60px;">Header 1</h1>
+</body>
+</html>
