@@ -9,12 +9,12 @@ window.onload= function() {
     alert("webbsidan är laddat ");
 	
 }
-window.onbeforeunload = function () {
-    if (confirm("Vill du verkligen lämna sida?"))//öppnas en promptruta
-   	{
-		self.location="http://www.aftonbladet.se";//öppnas url
-   	}
+window.onbeforeunload = window.onbeforeunload = function (event) {
+    event.preventDefault();
+    return (event.ReturnValue == "");
 }
+
+
 
 </script>
 <style>
