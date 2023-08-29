@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <html lang="sv">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Loopar sum</title>
+    <style>
+    b{
+        color:rgb(255, 0, 0);
+    }</style>
+    <SCRIPT type="text/javascript">
+    function  loops()
+    {
+        var nr=document.getElementById("nr").value;
+        var summa=0;
+        if(nr<=0)
+         document.getElementById("resFor").innerHTML="Error number>0!";
+           else
+        {
+            for (var i=0;i<=nr;i++)
+            {
+               summa+=i;
+            }
+            document.getElementById("resFor").innerHTML=("Summera alla nummer från 1 till nr med for: "+summa+"<br/>Nu med while:<br/>");
+            summa=0;
+            var j=0;
+            while(j<=nr)
+            {
+                summa+=j;
+                j++;
+            }
+            document.getElementById("resWhile").innerHTML=("Summera alla nummer från 1 till nr med while: "+summa);
+        }
+    }
+    </SCRIPT>
+    </head>
+    <body>
+          
+                        <label class="d-inline-block" >Enter number (number>0):</label>
+    <input  class="d-inline-block"  type="number" id="nr" onchange="loops()" />
+                        <br/><br/>
+                                    <b><div id="resFor"></div>
+                                    <div id="resWhile"></div></b>
+                                  
+    </body>
+    </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <html lang="sv">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Loopar</title>
+    <SCRIPT type="text/javascript">
+    function  loops()
+    {
+        document.write("Först med for<br/>");
+        var text="Hejsan hej från Haris Drapic. Jag tycker att det är bra tutorial i JavaScript! ";
+        for (var i=0;i<text.length;i++)
+        {
+            document.write(text.substring(i,i+1)+"-");
+        }
+        document.write("<br/>Nu med while<br/>");
+        var j=0;
+        while(j<text.length)
+        {
+            document.write(text.substring(j,j+1)+"-");
+            j++;
+        }
+    }
+    </SCRIPT>
+    </head>
+    <body onLoad="loops()">
+    
+    </body>
+    </html>

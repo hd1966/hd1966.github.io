@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Load, unload</title> 
+  
+<script  type="text/javascript">
+window.onload= function() {
+    alert("webbsidan är laddat ");
+	
+}
+window.onbeforeunload = function () {
+    if (confirm("Vill du verkligen lämna sida?"))//öppnas en promptruta
+   	{
+		self.location="http://www.aftonbladet.se";//öppnas url
+   	}
+}
+
+</script>
+<style>
+a{
+    width:60%;
+    background-color: aquamarine;
+    font-size: 28px;
+}
+.row
+{
+    display: flex;
+    justify-content: center;
+}
+    </style>
+</head>
+<body> 
+          <div class="row ">
+            <a href="http://www.aftonbladet.se" class="alert-link">Läs Aftonbladet</a>
+        </div>
+</body>
+</html>
