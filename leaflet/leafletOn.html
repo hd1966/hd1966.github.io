@@ -34,13 +34,10 @@ margin: auto;
 function initMap() 
 {
     mymap = L.map('mapDiv').setView([55.705, 13.19], 13);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '© OpenStreetMap'
-}).addTo(map);
-mymap.on('click', function(e){
-    var marker = L.marker(e.latlng).addTo(mymap);
-});
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '© OpenStreetMap'}).addTo(mymap);
+    mymap.on('click', function(e){
+        var marker = L.marker(e.latlng).addTo(mymap);
+    });
 
 }
 </script>

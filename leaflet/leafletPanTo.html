@@ -30,24 +30,18 @@ h1{
 <!-- Map skapandet -->
 <script>
     var mymap;
-function initMap() 
-{
-    mymap = L.map('mapDiv').setView([55.705, 13.19], 13);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '© OpenStreetMap'
-}).addTo(map);
-document.getElementById('mySelect').addEventListener('change', function(){locationOfMaps();});
+    function initMap() 
+    {
+        mymap = L.map('mapDiv').setView([55.705, 13.19], 13);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '© OpenStreetMap'}).addTo(mymap);
+        document.getElementById('mySelect').addEventListener('change', function(){locationOfMaps();});
+    }
 
-}
-
-var locations=[[55.705, 13.19],[59.334591, 18.063240],[40.730610, -73.935242],[48.864716, 2.349014]];
-function locationOfMaps() {
-    var i = document.getElementById("mySelect").selectedIndex;
-    mymap.panTo(locations[i]);
-    
-    
-}
+    var locations=[[55.705, 13.19],[59.334591, 18.063240],[40.730610, -73.935242],[48.864716, 2.349014]];
+    function locationOfMaps() {
+            var i = document.getElementById("mySelect").selectedIndex;
+            mymap.panTo(locations[i]);
+    }
 </script>
 </head>
 <body onload="initMap()">
