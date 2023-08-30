@@ -35,7 +35,7 @@ h1{
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'
-}).addTo(map);
+}).addTo(mymap);
 mymap.on('dblclick', function(e){
     L.circle(e.latlng, {
         color: 'red',
