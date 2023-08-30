@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Interactive map</title>
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
 <meta charset="utf-8" />
 
@@ -11,32 +12,42 @@ crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
 integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
 crossorigin=""></script>
-
 <style type="text/css">
 html { height: 100% }
-body { height: 100%; margin: 5%; }
-#mapDiv { width: 80vw; height: 80vh; }
+body { height: 100%; margin: 0; }
+
 h1{
-    text-align: center;
+  
+    text-align: center; 
+}
+#mapDiv { margin:50px;width: 90%; height: 80%; }
+#c{
+margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    
 }
 </style>
 <!-- Map skapandet -->
-<script >
-
+<script>
+    var mymap;
 function initMap() 
 {
-    var mymap = L.map('mapDiv').setView([55.705, 13.19], 13);
+    mymap = L.map('mapDiv').setView([55.705, 13.19], 13);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'
 }).addTo(map);
-}
+mymap.on('click', function(e){
+    var marker = L.marker(e.latlng).addTo(mymap);
+});
 
+}
 </script>
 </head>
-<body onload="initMap()">
-<h1>My First Map </h1>
-<br/>
+<body onload=initMap()>
+    <div id="c">
+<h1>Interactive map</h1></div>
 <div id="mapDiv"></div>
 </body>
 </html>
