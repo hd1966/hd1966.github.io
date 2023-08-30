@@ -16,7 +16,7 @@ crossorigin=""></script>
 <style type="text/css">
 html { height: 100% }
 body { height: 100%; margin: 1%; }
-#mapDiv { width: 80vw; height: 80vh; }
+#mapDiv { margin:auto; width: 80vw; height: 80vh; }
 h1 {text-align: center;}
 </style>
 <!-- Map skapandet -->
@@ -24,7 +24,7 @@ h1 {text-align: center;}
     function initMap()
 {
     var cities = L.layerGroup();
-    L.marker([55.70, 13.19]).bindPopup('Det är Lund').addTo(cities),
+    L.marker([55.70, 13.19]).bindPopup('Det är Lund').addTo(cities);
 	L.marker([55.60, 13.00]).bindPopup('Det är Malmö').addTo(cities);
 
 	var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
