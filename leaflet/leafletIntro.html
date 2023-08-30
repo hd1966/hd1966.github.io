@@ -22,21 +22,18 @@ h1{
 <!-- Map skapandet -->
 
 </head>
-<body>
+<body onload="initMap()">
 <h1>My First Map </h1>
 <br/>
 <div id="mapDiv"></div>
 <script >
-
+    //var myMap;
     function initMap() 
     {
-        var mymap = L.map('mapDiv').setView([55.705, 13.19], 13);
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '© OpenStreetMap'
-    }).addTo(map);
+        var myMap = L.map('mapDiv').setView([55.705, 13.19], 13);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '© OpenStreetMap'}).addTo(myMap);
     }
-    initMap();
+    
     
     </script>
 </body>
