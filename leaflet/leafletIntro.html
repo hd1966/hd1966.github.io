@@ -10,10 +10,13 @@
 <style type="text/css">
 html { height: 100% }
 body { height: 100%; margin: 5%; }
-#mapDiv { width: 80vw; height: 80vh; }
+
 h1{
     text-align: center;
 }
+.leaflet-container {
+    width: 80vw; height: 80vh;
+		}
 </style>
 <!-- Map skapandet -->
 
@@ -21,7 +24,7 @@ h1{
 <body onload="initMap()">
 <h1>My First Map </h1>
 <br/>
-<div id="mapDiv"></div>
+<div id="mapDiv" class="leaflet-container"></div>
 <script >
 
     function initMap() 
