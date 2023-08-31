@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <text x="250"  y="100"
+          transform="rotate(15 20,40)"
+          style="text-anchor: middle;font-family: Arial;
+                 font-size  : 34;
+                 stroke     : #000000;
+                 fill       : #00ff00;
+                "
+          >Rotated, <tspan style="font-weight: bold;">styled</tspan> SVG te<tspan style="baseline-shift: sub;">xt</tspan></text>
+
+          <defs>
+        <path id="myTextPath"
+              d="M75,20
+                 a 10,10 0 0,0 85,30" fill="green"
+               
+                />
+    </defs>
+
+    <text x="10" y="100" style="stroke: #ff0000;">
+      <textPath href="#myTextPath" >
+            Text along an arc...
+      </textPath>
+    </text>
+</svg>    
