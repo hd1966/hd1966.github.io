@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+    <style>div > svg{
+    height:600px;
+    width: 600px;
+    }
+    </style>
+   <body>
+       <div>
+            <svg  xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <linearGradient id="myLinearGradient1"
+                                x1="0%" y1="0%"
+                                x2="100%" y2="0%"
+                                spreadMethod="pad">
+                  <stop offset="10%" stop-color="#00cc00" stop-opacity="1"/>
+                  <stop offset="30%" stop-color="#006600" stop-opacity="1"/>
+          
+                  <stop offset="70%" stop-color="#cc0000" stop-opacity="1"/>
+                  <stop offset="90%" stop-color="#000099" stop-opacity="1"/>
+          
+                </linearGradient>
+          
+              </defs>
+          
+              <rect x="10" y="10" width="500" height="50" rx="10" ry="10"
+                 style="fill:url(#myLinearGradient1); stroke: #005000;
+                        stroke-width: 3;" />
+                        <defs>
+                            <radialGradient id="myRadialGradient4"
+                               fx="50%" fy="50%" r="50%"
+                               spreadMethod="pad">
+                              <stop offset="0%"   stop-color="#00ff00" stop-opacity="1"/>
+                              <stop offset="100%" stop-color="#001100" stop-opacity="1" />
+                            </radialGradient>
+                        </defs>
+                    
+                        <rect x="200" y="100" width="100" height="100" rx="10" ry="10"
+                               style="fill:url(#myRadialGradient4);
+                                      stroke: #005000; stroke-width: 3;" />
+
+                                      <defs>
+                                        <pattern id="pattern1"
+                                                 x="10" y="20" width="20" height="20"
+                                                 patternUnits="userSpaceOnUse" >
+                                      
+                                            <circle cx="10" cy="10" r="10" style="stroke: none; fill: #ff0000" />
+                                      
+                                        </pattern>
+                                      </defs>
+                                      
+                                      <rect x="50" y="100" width="100" height="100"
+                                          style="stroke: #000000; fill: url(#pattern1);" />   
+                                          
+                                          
+                                          <defs>
+                                            <filter id="blurFilter4" x="-20" y="-20" width="200" height="200">
+                                                <feGaussianBlur in="SourceGraphic" stdDeviation="8" />
+                                            </filter>
+                                        </defs>
+                                        <rect x="400" y="200" width="90" height="90"
+                                              style="stroke: none; fill: #00ff00; filter: url(#blurFilter4);" />
+                                          
+                                          
+        </svg>
+        </div>
+        </body>
+</html>

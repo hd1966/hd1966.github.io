@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <style>
+   
+    .flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+  height:350px;
+  border: darkblue 5px solid;
+  
+  
+}
+
+ .flex-container > svg{
+  background-color: #f1f1f1;
+  margin: 10px;
+  height: 320px;
+  width: 700px;
+  
+} 
+
+    </style>
+<body>
+    <div class="flex-container">
+        
+        <svg xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <rect  id="rect1" x="220" y="100" width="100" height="40"
+        style="stroke: #ff00ff; fill:none;" >
+      <animateTransform id="an1" attributeName="transform"
+                        type="rotate"
+                        from="0 300 200" to="360 300 200"
+                        begin="0s" dur="0s"
+                        repeatCount="0"
+              /></rect>
+                  
+    </svg>
+    <input id="button1" type="button" value="Rotate"
+            onclick="rotate()"/>
+            <input id="button2" type="button" value="Stop"
+            onclick="stop()"/>
+
+<script>
+    function rotate() {
+        var svgElement = document.getElementById("an1");
+        svgElement.setAttribute("begin","20s");
+        svgElement.setAttribute("dur","5s");
+        svgElement.setAttribute("repeatCount","indefinite");
+    }
+    function stop() {
+        var svgElement = document.getElementById("an1");
+        svgElement.setAttribute("repeatCount","0");
+        svgElement.setAttribute("dur","0s");
+    }
+</script>
+       
+    </div>
+
+
+
+
+
+</body>
+</html>
