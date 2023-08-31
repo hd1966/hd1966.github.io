@@ -13,7 +13,7 @@
           <defs>
         <path id="myTextPath"
               d="M75,20
-                 a 10 10 0 0 0 65 20" fill="green"
+                 a 10 10 0 0 0 65 20" fill="#0000ff"
                
                 />
     </defs>
