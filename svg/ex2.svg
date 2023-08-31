@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="rotate(45 50 50)" style="stroke: #0000ff; stroke-width: 2px; fill: #ff0000">
+      <line x1="50" y1="10" x2="85" y2="10"
+          />
+
+      <rect x="50" y="20" height="50" width="75"
+          />
+
+      <text x="50" y="90" >
+        Roterade former</text>
+    </g>
+
+</svg>
