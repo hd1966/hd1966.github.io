@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <defs>
+ 
+ <marker id="markerArrow" markerWidth="13" markerHeight="13" refX="2" refY="6"
+           orient="auto">
+      <path d="M2,2 L2,11 L10,6 L2,2" style="fill: #000000;" />
+      </marker>
+      <marker id="markerCircle" markerWidth="8" markerHeight="8" refX="5" refY="5">
+        <circle cx="5" cy="5" r="3" style="stroke: none; fill:#000000;"/>
+    </marker>
+
+</defs>  
+
+<path d="M100,100
+         L150,100
+         a50,25 0 0,0 150,100
+         q50,-50 70,-170
+         Z"
+      style="stroke: #006666; fill  : #ccccff; marker-start: url(#markerCircle);
+                   marker-mid: url(#markerArrow);"/>
+
+
+       <rect x="50" y="50" width="50" height="40" style="stroke:#006666; stroke-width: 1;
+               fill: #999900;opacity:0.5;"/>
+        <circle cx="50" cy="50" r="50" style="stroke:#006666; stroke-width: 1;
+               fill: #999900;opacity:0.5;"/> 
+        <polyline points="10,2  60,2  35,52"
+        style="stroke:#666600; stroke-width: 2;
+               fill: #00cc00;"/>
+</svg>
