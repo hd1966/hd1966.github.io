@@ -4,7 +4,7 @@
     <text x="250"  y="100"
           transform="rotate(15 20,40)"
           style="text-anchor: middle;font-family: Arial;
-                 font-size  : 34;
+                 font-size  : 48px;
                  stroke     : #000000;
                  fill       : #00ff00;
                 "
