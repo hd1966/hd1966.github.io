@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <style>
+   
+    .flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+  height:300px;
+  border: darkblue 5px solid;
+  
+  
+}
+
+ .flex-container > svg{
+  background-color: #f1f1f1;
+  margin: 2px;
+  height: 300px;
+  width: 800px;
+  
+} 
+    </style>
+<body>
+    <div class="flex-container">
+        
+        <svg xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+      <rect x="10" y="10" width="700" height="250"  style="stroke:#00ff00;fill: #000000"/>
+    
+      <image x="20" y="20" width="600" height="200"
+         xlink:href="lion.png" />
+
+         <text x="40" y="80"  style="stroke: #ffff00; font-size:48px;" >Text Behind Line</text>
+    
+      <line x1="25" y1="60" x2="450" y2="70"  stroke-dasharray="20,10,5,5,5,10"
+      style="stroke: #00ff00;    fill:none;
+      stroke-width:6px;
+      stroke-opacity: 0.3;"/>
+    </svg>
+       
+    </div>
+
+
+
+
+
+</body>
+</html>
