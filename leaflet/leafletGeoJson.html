@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feature collection</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>  
+     <!-- Leaflet's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+crossorigin=""/>
+    <script src="geojson.js"></script>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+crossorigin=""></script>
+    <style type="text/css">
+    html { height: 100% }
+    body { height: 100%; margin: 0; }
+    #mapDiv { margin:50px;width: 90%; height: 80%; }
+  
+    
+    h1{
+        text-align: center;
+    }
+    </style>
+    <!-- Map skapandet -->
+    <script>
+        // Properties
+var mymap;
+var myposition;
+// Methods
+function initMap() {
+    // Application init code
+    var mymap = L.map('mapDiv').setView([55.705, 13.19], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap'}).addTo(mymap);
+    mymap.on('locationfound', onLocationFound);
+    mymap.on('locationerror', onLocationError);
+    mymap.locate({setView: true, maxZoom: 14});
+}
+
+// for every feature, build popup content
+function onEachFeature(feature, layer) {
+    var popupContent;
+    if (feature.properties && feature.properties.title  && feature.properties.description) 
+    {
+      
+        popupContent ="<h3>"+ feature.properties.title +"</h3>"+"<p>"+
+            feature.properties.description+"</p><br/><img src='images/"+feature.properties.logo+"' alt='maptime logo gif' width='100px'  height='30px'/><br/>";
+    }
+    layer.bindPopup(popupContent);
+
+}
+//https://leafletjs.com/examples/mobile/
+// fired when location is found
+function onLocationFound(e) {
+    var userIcon = L.icon({
+        iconUrl: 'images/userPosition.png',
+       
+        iconSize:     [64, 64], // size of the icon
+        iconAnchor:   [32, 32], // point of the icon which will correspond to marker's location
+        popupAnchor:  [-3, -16] // point from which the popup should open relative to the iconAnchor
+    });  
+    var radius = e.accuracy / 2;
+    myposition=e.latlng;
+    L.marker(e.latlng,{icon: userIcon}).addTo(mymap)
+        .bindPopup("Your location is within " + radius + " meters from this point").openPopup();
+    L.circle(e.latlng, radius).addTo(mymap);
+    L.geoJSON(objjson,{style: function (feature) {
+    return feature.properties && feature.properties.style;
+    },onEachFeature: onEachFeature}).addTo(mymap);
+ }
+ //fired if location isn't found
+ function onLocationError(e) {
+    alert(e.message);
+ }
+
+
+
+    </script>
+    </head>
+    <body onload="initMap()">
+    <h1>Feature collection </h1>
+   <div id="mapDiv"></div>
+    </body>
+    </html>

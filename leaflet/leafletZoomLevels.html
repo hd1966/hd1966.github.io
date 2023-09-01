@@ -31,7 +31,7 @@ h1{
     var mymap;
 function initMap() 
 {
-    var mymap = L.map('mapDiv').setView([55.705, 13.19], 13);
+    mymap = L.map('mapDiv').setView([55.705, 13.19], 13);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'}).addTo(mymap);
