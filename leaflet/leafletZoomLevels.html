@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive map</title>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+<!-- Leaflet's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+crossorigin=""/>
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+crossorigin=""></script>
+<style type="text/css">
+html { height: 100% }
+body { height: 100%; margin: 0; }
+#mapDiv { margin:50px;width: 90%; height: 80%; }
+#c{
+margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    
+}
+
+h1{
+    text-align: center;
+}
+</style>
+<!-- Map skapandet -->
+<script >
+    var mymap;
+function initMap() 
+{
+    var mymap = L.map('mapDiv').setView([55.705, 13.19], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap'}).addTo(mymap);
+    document.getElementById('mySelect').addEventListener('change', function(){
+        zoomMap();
+    });
+
+}
+
+
+function zoomMap() {
+    var i = document.getElementById("mySelect").options[document.getElementById("mySelect").selectedIndex].value;
+    mymap.setZoom(i);
+    
+    
+}
+
+</script>
+</head>
+<body onload="initMap()">
+<h1>Interactive Map </h1>
+<div id="c">
+    <b>Zoom: </b>
+    <select id="mySelect" size="1" >
+        <option value="8">8</option>  
+        <option value="12"> 12</option>
+        <option value="15">15</option>
+        <option value="18">18</option>
+        
+      </select>
+      </div>
+ <div id="mapDiv"></div>
+</body>
+</html>
