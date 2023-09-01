@@ -35,6 +35,7 @@ function initMap()
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'}).addTo(mymap);
+    L.control.scale().addTo(mymap);
     document.getElementById('mySelect').addEventListener('change', function(){
         zoomMap();
     });
