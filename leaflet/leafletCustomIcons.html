@@ -16,7 +16,7 @@ crossorigin=""></script>
 <style type="text/css">
 html { height: 100% }
 body { height: 100%; margin: 0; }
-#mapDiv { width: 90vw; height: 90vh; margin:1vw; }
+#mapDiv { width: 90vw; height: 90vh; }
 #fl{
     display: flex;
     justify-content: center;
@@ -33,7 +33,7 @@ h1{
 {
     var mymap = L.map('mapDiv').setView([55.705, 13.19], 13);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 17,
+    maxZoom: 16,
     attribution: '© OpenStreetMap'
 }).addTo(mymap);
     
