@@ -59,10 +59,10 @@
 	const geojson = L.geoJson(afCountries).addTo(map);
 
 	geojson.eachLayer((layer) => {
-		layer.bindPopup(layer.feature.properties.name);
+		layer.bindPopup("<b>"+layer.feature.properties.formal_en +"</b><br>"+ layer.feature.properties.subregion);
 	});
 
-	map.setView({lat: 0.040182144806664, lng: 9.667968750000002}, 4);
+	map.setView({lat: 2.20182144806664, lng: 19.567968750000002}, 3);
 </script>
 
 
