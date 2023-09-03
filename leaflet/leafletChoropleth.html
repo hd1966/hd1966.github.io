@@ -24,7 +24,7 @@
 		}*/
 	</style>
 
-	<style>#map { width: 800px; height: 500px; }
+	<style>#map { margin:20px;width: 90%; height: 70%; }
 .info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; 
 	background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; } 
 .info h4 { margin: 0 0 5px; color: #777; }
@@ -32,14 +32,14 @@
 .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }</style>
 </head>
 <body>
-
+<h1>Choropleth map</h1>
 <div id='map'></div>
 
 <script type="text/javascript" src="europe-population-density.js"></script>
 
 <script type="text/javascript">
 
-	const map = L.map('map').setView([37.8, 10], 4);
+	const map = L.map('map').setView([47.75, 1.64], 4);
 
 	const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		maxZoom: 19,
@@ -47,7 +47,7 @@
 	}).addTo(map);
 
 	// control that shows state info on hover
-	const info = L.control();
+	const info = L.control({position: 'topleft'});
 
 	info.onAdd = function (map) {
 		this._div = L.DomUtil.create('div', 'info');
@@ -56,7 +56,7 @@
 	};
 
 	info.update = function (props) {//update properties
-		const contents = props ? `<b>${props.name}</b><br/>${props.population} people / km<sup>2</sup><br/>${props.populatio0/100000} people ` : 'Hover over a state';
+		const contents = props ? `<b>${props.country}</b><br/>${props.population} people / km<sup>2</sup><br/>${props.populatio0/1000000} people ` : 'Hover over a state';
 		this._div.innerHTML = `<h4>Europe states population density</h4>${contents}`; 
 	};
 
@@ -65,11 +65,11 @@
 
 	// get color depending on population density value
 	function getColor(d) {
-		return 	d > 500  ? '#6C7A10' :
-			d > 200  ? '#889914' :
-			d > 100  ? '#C0DB0F' :
-			d > 50   ? '#D7F226' :
-			d > 20   ? '#ECFC82' :'#F7FBDF';
+		return 	d > 2500  ? '#6C7A10' :
+			d > 180  ? '#889914' :
+			d > 130  ? '#C0DB0F' :
+			d > 80   ? '#D7F226' :
+			d > 40   ? '#ECFC82' :'#F7FBDF';
 		
 			
 
