@@ -58,7 +58,7 @@ h1{
 		return this._div;
 	};
 
-	info.update = function (props) {//update properties
+	info.update = function (props) {//update properties if false Hover over a state, true namn ,density and number of inhabitants
 		const contents = props ? `<b>${props.country}</b><br/>${props.population} people / km<sup>2</sup><br/>${props.populatio0/1000000} mil. peoples ` : 'Hover over a state';
 		this._div.innerHTML = `<h4>Europe states population density</h4>${contents}`; 
 	};
