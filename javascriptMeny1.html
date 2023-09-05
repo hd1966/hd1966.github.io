@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>SVG editor</title>
+    <style>
+    :root {
+    --main-bg-color: rgb(35, 92, 94);
+    --second-bg-color: rgb(41, 58, 77);
+    --main-text-color: #fff;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg-color);
+    height: 200vh;
+}
+
+#burger-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    z-index: 999;
+    color: var(--main-text-color);
+}
+
+
+#main-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--second-bg-color);
+    transition: clip-path 0.3s ease-in-out;
+    z-index: 998;
+}
+
+#main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    line-height: 100px;
+}
+
+#main-menu ul li a {
+    color: var(--main-text-color);
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.inactive {
+    clip-path: circle(0% at 100% 0);
+}
+
+.active {
+    clip-path: circle(75%);
+}
+
+  
+ 
+    </style>
+    <script>
+const burgerButton = document.getElementById("burger-button");
+const mainMenu = document.getElementById("main-menu");
+
+burgerButton.addEventListener("click", () => {
+    mainMenu.classList.toggle("active");
+    document.body.classList.toggle("no-scroll");
+});
+    </script>
+<body>
+<div id="burger-button">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>          
+</div>
+<div id="main-menu" class="inactive">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</div>
