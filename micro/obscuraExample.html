@@ -126,10 +126,14 @@
           }
         
           $(document).ready(function(){ //vad ska man göra för att förbereda dokumentet med
-            $('#filters').trigger('change');  
+            
             $('#mySelect').on('change', function(){
                 $('#image1').attr('src',images[$(this).prop('selectedIndex')]);
-                $('#filters').trigger('change');
+
+                setTimeout(() => {
+                    $('#filters').trigger('change');
+                }, "1000");
+   
                
             });
             $('#filters').on('change', function(){
