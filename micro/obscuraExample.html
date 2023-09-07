@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<title>Bildredigeraren</title>
+<script src="jquery-3.7.1.js"  
+></script> 
+<!--<script src="js/Editr-src.js"></script>-->
+<script src="obscura.min.js"></script>
+<!-- <link rel="stylesheet" href="css/bildredigeraren.css"> -->
+<style>
+ * {
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+        }
+        
+        html {
+            height: 100%;
+        }
+        
+        body {
+            background-color: white;
+        }
+        
+        #wrapper {
+            width: 900px;
+            padding: 50px;
+            margin: auto;
+            background-color: #EEEEFE;
+        }
+        
+        #editArea {
+            width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+        
+        menu {
+            text-align: center;
+            margin: 0px 0px 5px 0px;
+        }
+        
+        h1 {
+            font-family: "water";
+            color: darkblue;
+            margin: 20px;
+        }
+             
+        
+        @font-face {
+            font-family: 'water';
+            src: url('MightyBrush.ttf');
+            font-weight: normal;
+            font-style: normal;
+        }
+        img
+        {
+            width:50vw;
+            height:30vh;
+        }
+        .paper{
+            background:#999;
+            width:50vw;
+            height:30vh;
+            padding:20px 0;
+            text-align:center;
+            margin: auto;
+          
+        }
+
+</style>
+
+</head>
+<body>
+  <div id="wrapper">
+    <div id="editArea">  
+      Select picture:
+        <select id="mySelect">
+          <option>Sköldpadda</option>
+          <option>Manet</option>
+          <option>Taj Mahal</option>
+          <option>Chichen Itza</option>
+        </select>
+        <img id="image1" src="images/turtle.jpeg"  />
+       
+        <h1>Bildredigeraren</h1>
+        Change picture:
+        <select id="filters">
+          <option>None</option>
+          <option>Scale</option>
+          <option>Resize</option>
+          <option>Cropp</option>
+          <option>Rotate</option>
+          <option>Flip vertically</option>
+         </select>
+      </div>
+      <div class="paper">
+			<canvas id="changed"></canvas>
+    </div>
+    </div>
+    <script>
+          var images=["images/turtle.jpeg","images/jellyfish.jpg","images/taj_India.jpg","images/itza_Mexico.jpg"];
+           // Declare array of functions 
+           var arrayOfFunctions = [scaled,resize,cropp,rotated,flipped];
+          function scaled()
+          {
+          var scaled = obscura('#image1','#changed').resize('40%');
+          }
+        
+          function resize()
+          {
+            var resized = new obscura('#image1','#changed').resize(400);
+          }
+          function cropp()
+          {
+            var cropped = new obscura('#image1','#changed').crop(0,0,400,300);
+          }
+        
+          function rotated()
+          {
+          var rotated = new obscura('#image1','#changed').rotate(45).fit(300,250);
+          }
+          function flipped()
+          {
+          var flipped = new obscura('#image1','#changed').flip('vertical');
+          }
+        
+          $(document).ready(function(){ //vad ska man göra för att förbereda dokumentet med
+              
+            $('#mySelect').on('change', function(){
+                $('#image1').attr('src',images[$(this).prop('selectedIndex')]);
+            });
+            $('#filters').on('change', function(){
+                var canvas= document.getElementById("changed"); 
+                const context = canvas.getContext('2d');
+                context.clearRect(0, 0, canvas.width, canvas.height); 
+                if($(this).prop('selectedIndex')>0)
+                    arrayOfFunctions[$(this).prop('selectedIndex')-1]();
+            });
+              
+          });
+        </script>
+</body>
+</html>
