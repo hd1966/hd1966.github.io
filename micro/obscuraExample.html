@@ -126,14 +126,11 @@
           }
         
           $(document).ready(function(){ //vad ska man göra för att förbereda dokumentet med
-              
+            $('#filters').trigger('change');  
             $('#mySelect').on('change', function(){
                 $('#image1').attr('src',images[$(this).prop('selectedIndex')]);
-                var canvas= document.getElementById("changed"); 
-                const context = canvas.getContext('2d');
-                context.clearRect(0, 0, canvas.width, canvas.height); 
-                if($(this).prop('selectedIndex')>0)
-                    arrayOfFunctions[$(this).prop('selectedIndex')-1]();
+                $('#filters').trigger('change');
+               
             });
             $('#filters').on('change', function(){
                 var canvas= document.getElementById("changed"); 
