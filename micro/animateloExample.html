@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Pong</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+     
+         <style>
+            h1{
+    text-align:center;
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+    background-color: DodgerBlue;
+    flex-direction: column;
+    align-items: center;
+    width: 98vw;
+    height: 98vh;
+ 
+  }
+
+
+
+a,p{
+    font-size: 2em;
+    font-style: italic;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+ 
+
+}
+p{
+  
+    background-color: #00ff00;
+    margin-bottom: 70px;
+}
+#header{
+    left:15px;
+    position: absolute;
+    color: #000000;
+}
+
+         </style>
+        
+ 
+ 
+    </head>
+    <body>
+    <h1 id="header">Start animatelo</h1>
+             <div class="flex-container">
+                <p onmouseover="onHoverLink()" >Animatelo ex 1</p>
+                <p  ondblclick="onDubbel()" onclick="onDubbel()">Animatelo ex 2</p> 
+                
+                
+                     
+            </div> 
+            
+           
+               <!-- Include the polyfill -->
+<script src="web-animations.min.js"></script>
+ <!-- Include Animatelo -->
+            <script src="animatelo.min.js"></script>
+            <!--<script src="js/animate.js"></script>-->
+          
+              
+             
+    </body>
+</html>
