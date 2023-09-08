@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <style>
+                .flex-container {
+                  display: flex;
+                  justify-content: center;
+                  background-color: rgb(53, 30, 255);
+                }
+                
+               
+                </style>
+                </head>
+<body>
+        <div class="flex-container">
+<canvas id="myCanvas" width="1000px" height="1000px"
+style="border:1px solid #c3c3c3;">
+Your browser does not support the canvas element.
+</canvas>
+</div>
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "#00ff00";
+ctx.strokeStyle="#ffffff";
+ctx.lineWidth=7;
+ctx.fillRect(0,0,canvas.width,canvas.height);
+ctx.strokeRect(50,50,canvas.width-100,canvas.height-100); 
+ctx.strokeRect(150,50,canvas.width-300,100);
+ctx.strokeRect(150,canvas.height-150,canvas.width-300,100);
+
+
+ctx.strokeRect(400,canvas.height-75,canvas.width-800,25);
+
+ctx.strokeRect(400,50,canvas.width-800,25);
+
+ctx.beginPath();
+ctx.arc(canvas.width/2,150,50,0,Math.PI);
+ctx.stroke();
+ctx.beginPath();
+ctx.arc(canvas.width/2,canvas.height-150,50,Math.PI,2*Math.PI);
+ctx.stroke();
+ctx.beginPath();
+ctx.arc(canvas.width/2,canvas.height/2,100,0,2*Math.PI);
+ctx.stroke();
+ctx.beginPath();
+ctx.moveTo(50,canvas.height/2);
+ctx.lineTo(canvas.width-50,canvas.height/2);
+ctx.stroke();
+
+
+ctx.beginPath();
+ctx.arc(50,50,20,0,Math.PI/2);
+ctx.stroke();
+ctx.beginPath();
+ctx.arc(canvas.width-50,50,20,Math.PI/2,Math.PI);
+ctx.stroke();
+ctx.beginPath();
+ctx.arc(canvas.width-50,canvas.height-50,20,Math.PI,1.5*Math.PI);
+ctx.stroke();
+ctx.beginPath();
+ctx.arc(50,canvas.height-50,20,1.5*Math.PI,2*Math.PI);
+ctx.stroke();
+
+ctx.lineWidth=4;
+ctx.font="30px Verdana";
+
+// Create gradient
+var gradient=ctx.createLinearGradient(0,0,canvas.width,0);
+gradient.addColorStop("0.3","magenta");
+gradient.addColorStop("0.4","blue");
+gradient.addColorStop("0.6","red");
+// Fill with gradient
+ctx.strokeStyle=gradient;
+ctx.textAlign="center";
+
+ctx.strokeText("Fotbollsplan",canvas.width/2,30);
+</script>
+
+</body>
+</html>
