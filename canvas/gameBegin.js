@@ -16,17 +16,17 @@ function Game() {
     {
         this.context.clearRect(0, 0, this.width, this.height);//ta bort hela rektangeln 
         this.context.strokeRect(0, 0, this.width, this.height);
-        this.ball.draw(this.context);//rita bollen
+        this.boll.draw(this.context);//rita bollen
     };
     Game.prototype.update = function() 
     {
-        this.ball.update();//uppdatera bollens placering
-        if (this.ball.x  + this.ball.width > this.width || this.ball.x < 0) {
-                                this.ball.vx = -this.ball.vx;//om bollen går utanför ritdukens(canvas) vänstra //eller högra kant uppdatera bollen vx hastighet 
+        this.boll.update();//uppdatera bollens placering
+        if (this.boll.x  + this.boll.width > this.width || this.boll.x < 0) {
+                                this.boll.vx = -this.boll.vx;//om bollen går utanför ritdukens(canvas) vänstra //eller högra kant uppdatera bollen vx hastighet 
     //om bollen går utanför ritdukens(canvas) övre eller nedre kant uppdatera bollen vy hastighet- det ska du göra
         }
-          else if (this.ball.y + this.ball.height > this.height || this.ball.y  < 0 ) {
-            this.ball.vy = -this.ball.vy;
+          else if (this.boll.y + this.boll.height > this.height || this.boll.y  < 0 ) {
+            this.boll.vy = -this.boll.vy;
                    
     }
     };
@@ -56,10 +56,10 @@ function Game() {
         };
         var game = new Game();
 function initAll(){
-//använd  variabel game att anropa update och draw av game klass
-game.update();
-game.draw();
-setTimeout(initAll ,500);//uppdatering varje ½ sekund
+    //använd  variabel game att anropa update och draw av game klass
+    game.update();
+    game.draw();
+    setTimeout(initAll ,500);//uppdatering varje ½ sekund
 } 
 initAll();
 
