@@ -39,7 +39,7 @@ function Game() {
         this.vx=3; 
         this.vy=3;
         this.img=new Image();//bollens bild
-        this.img.src="boll.jpg";
+        this.img.src="boll.png";
         this.width=16;
         //ange höjd för att bilden har kvadratisk form
         this.height=16;
