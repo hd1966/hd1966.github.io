@@ -1,0 +1,13 @@
+h1{
+    text-align:center;
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+    background-color: DodgerBlue;
+  }
+#game {
+    background-color: #caa11a;
+   
+ 
+}
