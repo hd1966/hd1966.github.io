@@ -46,9 +46,9 @@ function Game() {
         }
         //2 funktioner inne i klassen för uppdatering och ritning
         Boll.prototype.update= function(){
-         this.x+=vx;
+         this.x+=this.vx;
          //uppdatera också y koordinat
-         this.y+=vy;
+         this.y+=this.vy;
         };
         Boll.prototype.draw = function(p)  //p är context
         {
