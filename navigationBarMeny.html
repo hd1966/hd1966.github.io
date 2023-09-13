@@ -52,7 +52,7 @@ the container for .dropdown-content. Since this is a <div> element, and not an <
 }
 
 /* Dropdown content (hidden by default)  holds the actual dropdown menu. It is hidden by default, and will be displayed on hover (see below).*/
-.dropdown-content,.dropdown-content1 {
+#dropdown-content,#dropdown-content1 {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -62,7 +62,7 @@ the container for .dropdown-content. Since this is a <div> element, and not an <
 }
 
 /* Links inside the dropdown */
-.dropdown-content a,.dropdown-content1 a {
+#dropdown-content a,#dropdown-content1 a {
   float: none;/*The float CSS property places an element on the left or right side of its container, 
   allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page, though still remaining a part of the flow*/
   color: black;
@@ -73,7 +73,7 @@ the container for .dropdown-content. Since this is a <div> element, and not an <
 }
 
 /* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover,.dropdown-content1 a:hover {
+#dropdown-content a:hover,#dropdown-content1 a:hover {
   background-color: #ddd;
 }
 
@@ -117,8 +117,11 @@ the container for .dropdown-content. Since this is a <div> element, and not an <
       <a href="#">Link 1</a>
       <a href="#">Link 2</a>
       <a href="#">Link 3</a>
-    </div>
-    <button class="dropbtn1">Dropdown 
+    </div> 
+   
+  </div>
+  <div class="dropdown"> 
+   <button class="dropbtn1">Dropdown 
       <i class="fa fa-caret-down"></i>
     </button>
     <div id="dropdown-content1">
@@ -126,7 +129,7 @@ the container for .dropdown-content. Since this is a <div> element, and not an <
       <a href="#">Link 5</a>
       <a href="#">Link 6</a>
     </div>
-  </div> 
+   </div>
 </div>
 
 <h3>Dropdown Menu inside a Navigation Bar</h3>
