@@ -62,7 +62,7 @@ the container for .dropdown-content. Since this is a <div> element, and not an <
 }
 
 /* Links inside the dropdown */
-#dropdown-content a,#dropdown-content1 a {
+.dropdown-content a {
   float: none;/*The float CSS property places an element on the left or right side of its container, 
   allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page, though still remaining a part of the flow*/
   color: black;
@@ -80,10 +80,10 @@ the container for .dropdown-content. Since this is a <div> element, and not an <
 /* Show the dropdown menu on hover 
 .dropdown:hover #dropdown-content,.dropdown:hover #dropdown-content1 {
   display: block;
-} */
+} 
 .show{
   display:block;
-}
+}*/
 </style>
 <script>
     /* When the user clicks on the button, 
@@ -116,7 +116,7 @@ the container for .dropdown-content. Since this is a <div> element, and not an <
     <button class="dropbtn"  onclick="myFunction('dropdown-content')">Dropdown 
       <i class="fa fa-caret-down"></i>
     </button>
-    <div id="dropdown-content">
+    <div id="dropdown-content" class="dropdown-content">
       <a href="#">Link 1</a>
       <a href="#">Link 2</a>
       <a href="#">Link 3</a>
@@ -127,7 +127,7 @@ the container for .dropdown-content. Since this is a <div> element, and not an <
    <button class="dropbtn" onclick="myFunction('dropdown-content1')">Dropdown 
       <i class="fa fa-caret-down"></i>
     </button>
-    <div id="dropdown-content1">
+    <div id="dropdown-content1" class="dropdown-content">
       <a href="#">Link 4</a>
       <a href="#">Link 5</a>
       <a href="#">Link 6</a>
