@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>nested table</title>
+    <style>caption
+        {
+            font-style: italic;
+        }
+        th{
+            font:bold,1.4em,Courier,monospace;
+            color:red;
+            text-align:center;
+            border-right:1px solid green;
+        }
+        th.main{
+            font:bold,1.8em,Courier,monospace;
+            color:#aa00ff;
+            text-align:center;
+            border-right:1px solid greenyellow;
+        }
+        
+        td.total{
+            font:bold,1.8em,Courier,monospace;
+            color:darkorange;
+            text-align:center;
+            border-right:1px solid greenyellow;
+        }
+        
+        
+        tfoot
+        {
+            color:darkblue;
+            font:bolder,Helvetica,sans-serif;
+        }
+        
+        td{
+            font:Helvetica,sans-serif;
+            border-top:1px solid green;
+            border-right:1px solid green;
+            text-align:center;
+        }
+
+        h1,input{
+    margin: 20px;
+}
+
+label{
+     width: 100px;
+     color: blue;
+     display: inline-block;
+     margin: 10px;
+     font-size: 1.2em;
+   
+
+}
+label.cr{
+  margin-right:1px;
+  width: 40px;
+}
+
+fieldset{
+    width:400px;
+}
+legend
+{
+    color:blueviolet;
+    background-color: antiquewhite;
+    width: 200px;
+}
+input{
+    background-color:  white;
+    width:200px;
+    
+}
+input[type='radio'],input[type='checkbox']{
+    
+    width:20px;
+    
+}
+
+input.button{
+  width: 100px;
+  margin-left: 165px;
+  
+}
+
+
+select>option{
+    font-weight: bold;
+    font-size: 1.2em;
+    font-family: 'Courier New', Courier, monospace;
+}
+        
+        body{
+           background-color:  #DEFF9C;
+          
+        }
+        </style>
+   
+</head>
+<body>
+    <div>
+<h1>Nästlad tabell</h1>
+<table class="main"><caption>Fruits/month</caption>
+<tr>  <th class="main">January</th>
+    <th class="main">February</th>
+    <th class="main">March</th></tr>
+<tr><td><table>
+    <thead>
+      <tr>
+        <th>S.N</th>
+        <th>Item</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Apple</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Mango</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Orange</td>
+        <td>2</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">Total</td>
+        <td>10</td>
+      </tr>
+    </tfoot>
+</table></td>
+<td><table>
+    <thead>
+      <tr>
+        <th>S.N</th>
+        <th>Item</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Apple</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Mango</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Orange</td>
+        <td>1</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">Total</td>
+        <td>5</td>
+      </tr>
+    </tfoot>
+</table></td>
+<td><table>
+    <thead>
+      <tr>
+        <th>S.N</th>
+        <th>Item</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Apple</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Mango</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Orange</td>
+        <td>1</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td  colspan="2">Total</td>
+        <td>10</td>
+      </tr>
+    </tfoot>
+</table></td></tr>
+<tr > <td  class="total" colspan="2">Total</td>
+    <td  class="total" >25</td>
+</tr>
+
+  </table></div>
+  <div><form action="submit.php" method="get">
+    <fieldset>
+      <legend>Login</legend>
+      <label for="username">Username:*</label><!-- "for" targets "id" -->
+      <input type="text" id="username" name="username" required><br>
+      <label for="password">Password:*</label>
+      <input type="password" id="password" name="password" required pattern=".{4,}"><br>
+    </fieldset>
+   
+    <fieldset>
+      <legend>Gender*</legend>
+      <label  class="cr" for="male">Male</label>
+      <input id="male" type="radio" name="gender" value="m" required><br>
+      <label class="cr" for="female">Female</label><input id="female" type="radio" name="gender" value="f"><br>
+    </fieldset>
+   
+    <fieldset>
+      <legend>Programming Skill</legend>
+      <label class="cr" for="java"> Java</label><input id="java" type="checkbox" name="programming" value="java"><br>
+      <label class="cr" for="cplus">C++</label><input  id="cplus" type="checkbox" name="programming" value="cpp" checked><br> 
+      <label class="cr" for="charp">C#</label><input id="csharp" type="checkbox" name="programming" value="csharp"><br>
+    </fieldset>
+   
+    <fieldset>
+      <legend>Fruit</legend>
+      Choose a fruit:
+      <select name="fruit">
+        <option value="apple">Apple</option>
+        <option value="banana" selected>Banana</option>
+        <option value="orange">Orange</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <legend>Comment</legend>
+    <textarea name="comment" placeholder="Enter your comment here" rows="5" cols="40" maxlength="180"></textarea><br>
+    </fieldset>
+   
+    <input class="button" type="submit" value="Send">
+   
+  </form></div>
+  </body>
+  </html>
