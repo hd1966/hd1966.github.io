@@ -96,11 +96,14 @@ select>option{
            background-color:  #DEFF9C;
           
         }
+        #form{
+         float: left;   
+        }
         </style>
    
 </head>
 <body>
-    <div>
+    <div id="table">
 <h1>Nästlad tabell</h1>
 <table class="main"><caption>Fruits/month</caption>
 <tr>  <th class="main">January</th>
@@ -207,7 +210,7 @@ select>option{
 </tr>
 
   </table></div>
-  <div><form action="submit.php" method="get">
+  <div id="form"><form action="submit.php" method="get">
     <fieldset>
       <legend>Login</legend>
       <label for="username">Username:*</label><!-- "for" targets "id" -->
