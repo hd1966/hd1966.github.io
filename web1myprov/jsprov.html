@@ -5,16 +5,20 @@
     <title>Math exempel</title>
     <style>
         label,button{
-            margin-right:20dp;
+            margin:20dp; 
+            font:italic bold  24px Courier,monospace ;
+            
         }
         button{
             background-color: aqua;
+           
+
         }
     </style>
     <script>  
         function fourOperations(sign) {
         var tal1= document.getElementById("op1").value;  
-        var tal1= document.getElementById("op2").value; 
+        var tal2= document.getElementById("op2").value; 
         if(sign=='*')
         {
             alert(tal1*tal2);
@@ -36,7 +40,7 @@
     </head>
     <body>
         <form>
-            <p><label for="op1">Tal 1:</label> <input type="text" id="op1" > 
+            <p><label for="op1">Tal 1:</label> <input type="text" id="op1" ></p> 
             <p><label for="op2">Tal 2:</label> <input type="text" id="op2" ></p>
         </form>
          <button onclick="fourOperations('+')">+</button>   <button onclick="fourOperations('-')">-</button>  <button onclick="infinity('*')">*</button> 
